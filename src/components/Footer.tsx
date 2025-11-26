@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -63,6 +63,16 @@ const Footer = () => {
                   <a href="tel:01603123456" className="opacity-90 hover:opacity-100">
                     01603 123 456
                   </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
+                <MessageCircle className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold">WhatsApp</div>
+                  <a href="https://wa.me/441603123456" className="opacity-90 hover:opacity-100">
+                    01603 123 456
+                  </a>
+                  <div className="text-xs opacity-75 mt-0.5">Only 8:30am - 5:30pm</div>
                 </div>
               </li>
               <li className="flex items-start gap-2">
