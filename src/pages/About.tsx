@@ -52,10 +52,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Meet Our Independent Equine Veterinary Team
+              Meet Our Fully Mobile Independent Equine Veterinary Team
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              As a proudly independent equine veterinary practice, our team makes every decision based on your horse's best interests—not corporate profit margins. Our experienced independent vets provide the highest standard of personalised equine care across Norfolk and Suffolk. With 24/7 on-call emergency support, we're here whenever you need us.
+              As a proudly independent, fully mobile equine veterinary practice, our team comes directly to your yard with regular zone visits across Norfolk and Suffolk. We make every decision based on your horse's best interests—not corporate profit margins. Our experienced independent mobile vets provide the highest standard of personalised equine care wherever you are. With 24/7 on-call emergency support, we're here whenever you need us.
             </p>
           </div>
         </div>

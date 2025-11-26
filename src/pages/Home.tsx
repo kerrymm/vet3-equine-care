@@ -62,10 +62,10 @@ const Home = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-2xl text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-                Independent Equine Vets Serving Norfolk & Suffolk
+                Fully Mobile Independent Equine Vets
               </h1>
               <p className="text-lg md:text-xl mb-8 opacity-95">
-                Proudly independent veterinary practice offering 24/7 emergency equine care. Professional, personalised service for your horses with no corporate constraints.
+                Proudly independent, fully mobile veterinary practice offering 24/7 emergency equine care. Regular zone visits across Norfolk & Suffolk. Professional, personalised service—we come to you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -88,10 +88,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Choose Our Independent Equine Practice?
+              Fully Mobile Independent Equine Vets
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              As an independent equine veterinary practice, Vet3 offers personalised care without corporate pressures. Our dedicated team of independent vets serves horses across Norfolk and Suffolk with 24/7 emergency support. We make decisions based solely on your horse's wellbeing, providing professional equine healthcare with genuine attention to each animal.
+              As a fully mobile independent equine veterinary practice, we bring professional care directly to your yard. With organised zone visits across Norfolk and Suffolk, our independent vets provide convenient, accessible equine healthcare. We come to you, offering personalised service without corporate pressures—making decisions based solely on your horse's wellbeing.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 p-6 bg-secondary rounded-2xl max-w-2xl mx-auto">
