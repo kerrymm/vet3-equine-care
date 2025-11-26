@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const { toast } = useToast();
@@ -130,46 +132,52 @@ const Register = () => {
                       <Label htmlFor="microchip">Microchip Number</Label>
                       <Input id="microchip" />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="insurance">Insurance Company</Label>
-                      <Input id="insurance" placeholder="Optional" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="medicalHistory">Medical History / Current Medications</Label>
-                      <Textarea
-                        id="medicalHistory"
-                        rows={4}
-                        placeholder="Please provide any relevant medical history or current medications"
-                      />
+                  </div>
+
+                  {/* Previous Veterinary Practice */}
+                  <div className="space-y-4 pt-6 border-t">
+                    <h3 className="text-lg font-semibold text-foreground">Previous Veterinary Practice</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="previousVet">Previous Veterinary Practice Name</Label>
+                        <Input id="previousVet" />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="previousVetContact">Previous Veterinary Practice Contact Number</Label>
+                        <Input id="previousVetContact" type="tel" />
+                      </div>
                     </div>
                   </div>
 
-                  {/* Additional Information */}
+                  {/* Consent and Permissions */}
                   <div className="space-y-4 pt-6 border-t">
-                    <h3 className="text-lg font-semibold text-foreground">
-                      Additional Information
-                    </h3>
-                    <div className="space-y-2">
-                      <Label htmlFor="stableAddress">
-                        Stable/Yard Address (if different from owner address)
+                    <div className="flex items-start space-x-3">
+                      <Checkbox id="permission" required />
+                      <Label htmlFor="permission" className="text-sm font-normal leading-relaxed cursor-pointer">
+                        Do we have permission to contact the previous practice and request your horse's clinical history?
                       </Label>
-                      <Textarea id="stableAddress" rows={2} />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="comments">Additional Comments or Requirements</Label>
-                      <Textarea id="comments" rows={3} />
+                    <div className="flex items-start space-x-3">
+                      <Checkbox id="consent" required />
+                      <Label htmlFor="consent" className="text-sm font-normal leading-relaxed cursor-pointer">
+                        I agree to your Terms & Conditions and Privacy Policy
+                      </Label>
                     </div>
+                    <p className="text-sm text-muted-foreground">
+                      Our{" "}
+                      <Link to="/terms" className="text-primary hover:underline">
+                        Terms and Conditions
+                      </Link>{" "}
+                      and{" "}
+                      <Link to="/privacy" className="text-primary hover:underline">
+                        Privacy Policy
+                      </Link>
+                    </p>
                   </div>
 
                   <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
                     {isSubmitting ? "Submitting..." : "Complete Registration"}
                   </Button>
-
-                  <p className="text-sm text-muted-foreground text-center">
-                    By registering, you agree to our terms of service and privacy policy. We'll
-                    contact you to confirm your registration and schedule any necessary
-                    appointments.
-                  </p>
                 </form>
               </CardContent>
             </Card>
