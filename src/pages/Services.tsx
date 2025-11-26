@@ -94,7 +94,7 @@ const Services = () => {
               Independent Equine Veterinary Services Norfolk & Suffolk
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              As an independent equine veterinary practice, we provide comprehensive horse care tailored to each animal's unique needs. From 24/7 emergency care to routine check-ups, our independent vets deliver professional, personalized equine healthcare across Norfolk and Suffolk.
+              As an independent equine veterinary practice, we provide comprehensive horse care tailored to each animal's unique needs. From 24/7 emergency care to routine check-ups, our independent vets deliver professional, personalised equine healthcare across Norfolk and Suffolk.
             </p>
           </div>
         </div>
@@ -140,7 +140,7 @@ const Services = () => {
             Register with Independent Equine Vets
           </h2>
           <p className="text-lg mb-8 opacity-95 max-w-2xl mx-auto">
-            Join horse owners across Norfolk and Suffolk who trust our independent veterinary practice. Experience comprehensive, personalized equine care from professional independent vets who prioritize your horse's wellbeing above all else.
+            Join horse owners across Norfolk and Suffolk who trust our independent veterinary practice. Experience comprehensive, personalised equine care from professional independent vets who prioritise your horse's wellbeing above all else.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" variant="secondary">

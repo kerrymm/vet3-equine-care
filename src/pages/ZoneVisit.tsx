@@ -75,7 +75,7 @@ const ZoneVisit = () => {
                 Zone Visit Schedule
               </h1>
               <p className="text-lg text-muted-foreground">
-                We organize regular visits to designated zones across Norfolk & Suffolk to provide
+                We organise regular visits to designated zones across Norfolk & Suffolk to provide
                 efficient service to our clients.
               </p>
             </div>
@@ -132,7 +132,7 @@ const ZoneVisit = () => {
                   </CardHeader>
                   <CardContent className="space-y-4 text-sm text-muted-foreground">
                     <p>
-                      To provide efficient service across the region, we organize our routine visits
+                      To provide efficient service across the region, we organise our routine visits
                       by geographic zones. This allows us to:
                     </p>
                     <ul className="list-disc list-inside space-y-2 ml-2">
