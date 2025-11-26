@@ -49,6 +49,16 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link to="/terms" className="opacity-90 hover:opacity-100 transition-opacity">
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy" className="opacity-90 hover:opacity-100 transition-opacity">
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -112,8 +122,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm opacity-90">
-          <p>&copy; {new Date().getFullYear()} Vet3 Equine Care. All rights reserved.</p>
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8">
+          <div className="text-xs opacity-75 mb-4 leading-relaxed">
+            <p>
+              Vet3 Equine Care Limited is an Introducer Appointed Representative of Agria Pet Insurance Ltd who administer the insurance and is authorised and regulated by the Financial Conduct Authority, Financial Services Register Number 496160. Agria Pet Insurance is registered and incorporated in England and Wales with registered number 04258783. Registered office: First Floor, Blue Leanie, Walton Street, Aylesbury, Buckinghamshire, HP21 7QW. Agria insurance policies are underwritten by Agria Försäkring.
+            </p>
+          </div>
+          <div className="text-center text-sm opacity-90">
+            <p>&copy; {new Date().getFullYear()} Vet3 Equine Care. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>
