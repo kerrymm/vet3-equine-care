@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Phone, Clock, Shield } from "lucide-react";
+import { Phone, Clock, Shield, MapPin } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import StaffCard from "@/components/StaffCard";
@@ -197,6 +197,48 @@ const Home = () => {
             <Button asChild size="lg" variant="outline">
               <Link to="/services">View All Services</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Zone Visit Section */}
+      <section className="py-16 md:py-24 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-card rounded-2xl p-8 md:p-12 shadow-lg border border-border">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4">
+                  <MapPin className="h-8 w-8 text-accent" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  Are We In Your Area?
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  We're fully mobile independent vets with regular zone visits across Norfolk & Suffolk. Check our zone schedule to see when we visit your area.
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button asChild size="lg" className="w-full sm:w-auto">
+                  <Link to="/zone-visit" className="flex items-center gap-2">
+                    <MapPin className="h-5 w-5" />
+                    View Zone Map & Schedule
+                  </Link>
+                </Button>
+                <div className="text-center sm:text-left">
+                  <p className="text-sm text-muted-foreground mb-2">
+                    Not sure which zone you're in?
+                  </p>
+                  <a
+                    href="tel:01603123456"
+                    className="text-lg font-semibold text-accent hover:text-accent/80 transition-colors flex items-center gap-2 justify-center sm:justify-start"
+                  >
+                    <Phone className="h-5 w-5" />
+                    Call us: 01603 123 456
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
