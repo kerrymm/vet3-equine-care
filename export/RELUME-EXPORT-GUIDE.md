@@ -431,27 +431,28 @@ Style: Multi-step or sectioned layout, clear labels, good spacing
 ### Colors (Apply in Relume Global Styles)
 
 **Primary Colors:**
-- Primary: `#2B5F44` (Evergreen - main brand color)
-- Primary Light: `#3D7F5E` (hover states)
-- Primary Dark: `#1D3F2D` (active states)
+- Primary: `#050D2B` / `hsl(235, 95%, 13%)` (Dark Navy - main brand color)
+- Primary Hover: `#0A1546` (slightly lighter for hover states)
+- Primary Dark: `#020614` (active states)
 
 **Accent Colors:**
-- Accent: `#D4A574` (Warm Sand - CTAs, highlights)
-- Accent Light: `#E8C8A0`
-- Accent Dark: `#B88D5C`
+- Accent: `#5DBADD` / `hsl(200, 85%, 65%)` (Light Blue - CTAs, highlights)
+- Accent Light: `#89D0E8` (hover/lighter variant)
+- Accent Dark: `#3AA7CC` (active states)
 
 **Neutral Colors:**
-- Background: `#FDFBF9` (Cream)
-- Surface: `#FFFFFF` (White)
-- Text Primary: `#1A1A1A` (Charcoal)
-- Text Secondary: `#666666` (Medium Gray)
-- Border: `#E5E5E5` (Light Gray)
+- Background: `#FFFFFF` (White)
+- Secondary Background: `#F0F5F7` / `hsl(200, 20%, 95%)` (Light gray-blue)
+- Surface: `#FFFFFF` (White cards)
+- Text Primary: `#050D2B` / `hsl(235, 50%, 15%)` (Dark Navy)
+- Text Secondary: `#596B7A` / `hsl(235, 20%, 50%)` (Medium Gray)
+- Border: `#D9E5EB` / `hsl(200, 20%, 90%)` (Light Gray-Blue)
 
 **Functional Colors:**
 - Error: `#DC2626`
 - Success: `#16A34A`
 - Warning: `#EA580C`
-- Info: `#0891B2`
+- Info: `#5DBADD`
 
 ### Typography
 
@@ -516,23 +517,23 @@ Style: Multi-step or sectioned layout, clear labels, good spacing
 
 ### Buttons
 **Primary Button:**
-- Background: Evergreen (#2B5F44)
+- Background: Dark Navy (#050D2B)
 - Text: White
-- Hover: Primary Light (#3D7F5E)
+- Hover: Slightly lighter navy (#0A1546)
 - Padding: 12px 32px
-- Border Radius: 6px
+- Border Radius: 0.75rem (12px)
 
 **Secondary Button:**
-- Background: Accent (#D4A574)
-- Text: Charcoal
-- Hover: Accent Light (#E8C8A0)
+- Background: Light Blue (#5DBADD)
+- Text: Dark Navy (#050D2B)
+- Hover: Lighter Blue (#89D0E8)
 - Same padding and border radius
 
 **Outline Button:**
-- Border: 2px solid Evergreen
+- Border: 2px solid Dark Navy
 - Background: Transparent
-- Text: Evergreen
-- Hover: Background Evergreen, Text White
+- Text: Dark Navy
+- Hover: Background Dark Navy, Text White
 
 ### Cards
 - Background: White
@@ -544,16 +545,16 @@ Style: Multi-step or sectioned layout, clear labels, good spacing
 
 ### Forms
 - Input Background: White
-- Border: 1px solid #E5E5E5
-- Focus Border: Primary (#2B5F44)
-- Label: Text Secondary (#666666), 14px
+- Border: 1px solid #D9E5EB (Light Gray-Blue)
+- Focus Border: Light Blue (#5DBADD)
+- Label: Text Secondary (#596B7A), 14px
 - Required indicator: Red asterisk
 - Error state: Red border and text
 
 ### Footer
-- Background: Primary Dark (#1D3F2D)
+- Background: Dark Navy (#050D2B)
 - Text: White or light gray
-- Link Hover: Accent (#D4A574)
+- Link Hover: Light Blue (#5DBADD)
 - Padding: 60px 20px
 - Multi-column layout on desktop, stacked on mobile
 
@@ -618,9 +619,9 @@ SITEMAP:
 
 BRAND STYLE:
 - Professional, trustworthy, modern
-- Primary color: Deep green (#2B5F44)
-- Accent color: Warm sand (#D4A574)
-- Font: Outfit
+- Primary color: Dark navy blue (#050D2B)
+- Accent color: Light blue (#5DBADD)
+- Font: System default (can customize)
 - Imagery: Equine/veterinary themed
 
 KEY FEATURES:
