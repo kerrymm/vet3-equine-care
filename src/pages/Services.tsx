@@ -126,8 +126,8 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Accordion */}
-      <section className="py-16 md:py-24">
+      {/* Services - Mobile Accordion */}
+      <section className="py-16 md:py-24 lg:hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
@@ -156,6 +156,35 @@ const Services = () => {
                 );
               })}
             </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Services - Desktop Grid */}
+      <section className="py-16 md:py-24 hidden lg:block">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {services.map((service) => {
+              const Icon = service.icon;
+              return (
+                <div
+                  key={service.title}
+                  className="bg-card rounded-xl border border-border p-6 hover:shadow-lg transition-shadow"
+                >
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                      <Icon className="h-6 w-6 text-accent" />
+                    </div>
+                    <h3 className="font-semibold text-foreground text-lg leading-tight pt-2">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
