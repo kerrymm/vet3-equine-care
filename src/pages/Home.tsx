@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import StaffCard from "@/components/StaffCard";
 import ServiceCard from "@/components/ServiceCard";
-import heroImage from "@/assets/hero-equine.jpg";
+import heroImage from "@/assets/hero-equine-photo.jpg";
 
 const Home = () => {
   const topStaff = [
