@@ -134,6 +134,25 @@ const Register = () => {
                     </div>
                   </div>
 
+                  {/* Address Where Horse is Kept */}
+                  <div className="space-y-4 pt-6 border-t">
+                    <h3 className="text-lg font-semibold text-foreground">Address Where Horse is Kept</h3>
+                    <div className="space-y-2">
+                      <Label htmlFor="horseAddress">Address *</Label>
+                      <Textarea id="horseAddress" required rows={3} />
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="horseCity">Town/City *</Label>
+                        <Input id="horseCity" required />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="horsePostcode">Postcode *</Label>
+                        <Input id="horsePostcode" required />
+                      </div>
+                    </div>
+                  </div>
+
                   {/* Previous Veterinary Practice */}
                   <div className="space-y-4 pt-6 border-t">
                     <h3 className="text-lg font-semibold text-foreground">Previous Veterinary Practice</h3>
