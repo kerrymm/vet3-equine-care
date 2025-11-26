@@ -9,7 +9,7 @@ const About = () => {
     {
       name: "Dr. Sarah Mitchell",
       role: "Lead Veterinarian",
-      bio: "With over 20 years of equine veterinary experience, Sarah specializes in sports medicine and emergency care. She founded Vet3 to provide independent, high-quality care to horses across Norfolk & Suffolk.",
+      bio: "With over 20 years of equine veterinary experience, Sarah specializes in sports medicine and emergency care. She founded Vet3 as an independent practice to provide personalized, high-quality equine care free from corporate pressures—putting horses first across Norfolk & Suffolk.",
     },
     {
       name: "Dr. James Anderson",
@@ -52,12 +52,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Meet Our Team
+              Meet Our Independent Equine Veterinary Team
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our experienced team of veterinary professionals is dedicated to providing the highest
-              standard of equine care across Norfolk and Suffolk. With 24/7 on-call emergency
-              support, we're here whenever you need us.
+              As a proudly independent equine veterinary practice, our team makes every decision based on your horse's best interests—not corporate profit margins. Our experienced independent vets provide the highest standard of personalized equine care across Norfolk and Suffolk. With 24/7 on-call emergency support, we're here whenever you need us.
             </p>
           </div>
         </div>
@@ -78,11 +76,10 @@ const About = () => {
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Experience Expert Equine Care
+            Experience Independent Equine Veterinary Excellence
           </h2>
           <p className="text-lg mb-8 opacity-95 max-w-2xl mx-auto">
-            Our team is ready to provide exceptional care for your horses. Register today to access
-            our comprehensive veterinary services.
+            Our independent veterinary team is ready to provide exceptional, personalized care for your horses. Register today to access professional equine healthcare from vets who answer only to you and your horse's needs.
           </p>
           <Button asChild size="lg" variant="secondary">
             <Link to="/register">Register Your Horse</Link>

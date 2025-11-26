@@ -91,11 +91,10 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Comprehensive Equine Services
+              Independent Equine Veterinary Services Norfolk & Suffolk
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              From emergency care to routine check-ups, we provide a full range of veterinary
-              services to keep your horses healthy and happy.
+              As an independent equine veterinary practice, we provide comprehensive horse care tailored to each animal's unique needs. From 24/7 emergency care to routine check-ups, our independent vets deliver professional, personalized equine healthcare across Norfolk and Suffolk.
             </p>
           </div>
         </div>
@@ -138,11 +137,10 @@ const Services = () => {
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Register for Our Services
+            Register with Independent Equine Vets
           </h2>
           <p className="text-lg mb-8 opacity-95 max-w-2xl mx-auto">
-            Join the Vet3 family and give your horses access to comprehensive, professional
-            veterinary care.
+            Join horse owners across Norfolk and Suffolk who trust our independent veterinary practice. Experience comprehensive, personalized equine care from professional independent vets who prioritize your horse's wellbeing above all else.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" variant="secondary">
