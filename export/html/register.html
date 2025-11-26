@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Your Horse - Vet3 Equine Care</title>
+  <meta name="description" content="Register your horse with Vet3 Equine Care for professional independent equine veterinary services across Norfolk & Suffolk.">
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <img src="../assets/logo.png" alt="Vet3 Equine Care">
+      </a>
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link">Home</a></li>
+        <li><a href="about.html" class="navbar-link">About</a></li>
+        <li><a href="services.html" class="navbar-link">Services</a></li>
+        <li><a href="zone-visit.html" class="navbar-link">Zone Visit</a></li>
+        <li><a href="contact.html" class="navbar-link">Contact</a></li>
+        <li><a href="register.html" class="btn btn-primary btn-sm active">Register</a></li>
+        <li><a href="tel:01603123456" class="btn btn-outline btn-sm"><i data-feather="phone" class="icon-sm"></i> <span class="hide-mobile">24/7 On-Call</span></a></li>
+      </ul>
+      <button class="navbar-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div class="navbar-mobile">
+      <a href="index.html" class="navbar-link">Home</a>
+      <a href="about.html" class="navbar-link">About</a>
+      <a href="services.html" class="navbar-link">Services</a>
+      <a href="zone-visit.html" class="navbar-link">Zone Visit</a>
+      <a href="contact.html" class="navbar-link">Contact</a>
+      <a href="register.html" class="btn btn-primary btn-full active">Register Your Horse</a>
+      <a href="tel:01603123456" class="btn btn-outline btn-full"><i data-feather="phone" class="icon-sm"></i> 24/7 On-Call Support</a>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <section class="section">
+    <div class="container">
+      <div class="max-w-3xl" style="margin: 0 auto;">
+        
+        <div class="text-center mb-12">
+          <h1>Register Your Horse</h1>
+          <p class="text-lg text-muted">Join Vet3 Equine Care to access our comprehensive veterinary services across Norfolk & Suffolk.</p>
+        </div>
+
+        <!-- Registration Form Card -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Horse Registration Form</h2>
+            <p class="card-description">Please provide the following information to register your horse with our practice.</p>
+          </div>
+          
+          <div class="card-content">
+            <form data-form="register">
+              
+              <!-- Owner Information -->
+              <div class="mb-8">
+                <h3 class="mb-6">Owner Information</h3>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName" class="form-label">First Name *</label>
+                    <input type="text" id="firstName" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName" class="form-label">Last Name *</label>
+                    <input type="text" id="lastName" class="form-input" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" id="email" class="form-input" required>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number *</label>
+                    <input type="tel" id="phone" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="altPhone" class="form-label">Alternative Phone</label>
+                    <input type="tel" id="altPhone" class="form-input">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="address" class="form-label">Address *</label>
+                  <textarea id="address" class="form-textarea" rows="3" required></textarea>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="city" class="form-label">Town/City *</label>
+                    <input type="text" id="city" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="postcode" class="form-label">Postcode *</label>
+                    <input type="text" id="postcode" class="form-input" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Horse Information -->
+              <div class="mb-8" style="padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+                <h3 class="mb-6">Horse Information</h3>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="horseName" class="form-label">Horse Name *</label>
+                    <input type="text" id="horseName" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="breed" class="form-label">Breed</label>
+                    <input type="text" id="breed" class="form-input">
+                  </div>
+                </div>
+
+                <div class="form-row" style="grid-template-columns: repeat(3, 1fr);">
+                  <div class="form-group">
+                    <label for="age" class="form-label">Age *</label>
+                    <input type="number" id="age" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="sex" class="form-label">Sex *</label>
+                    <input type="text" id="sex" class="form-input" placeholder="e.g., Mare, Gelding" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="color" class="form-label">Color</label>
+                    <input type="text" id="color" class="form-input">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="microchip" class="form-label">Microchip Number</label>
+                  <input type="text" id="microchip" class="form-input">
+                </div>
+              </div>
+
+              <!-- Horse Address -->
+              <div class="mb-8" style="padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+                <h3 class="mb-6">Address Where Horse is Kept</h3>
+                
+                <div class="form-group">
+                  <label for="horseAddress" class="form-label">Address *</label>
+                  <textarea id="horseAddress" class="form-textarea" rows="3" required></textarea>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="horseCity" class="form-label">Town/City *</label>
+                    <input type="text" id="horseCity" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="horsePostcode" class="form-label">Postcode *</label>
+                    <input type="text" id="horsePostcode" class="form-input" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Previous Vet -->
+              <div class="mb-8" style="padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+                <h3 class="mb-6">Previous Veterinary Practice</h3>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="previousVet" class="form-label">Previous Veterinary Practice Name</label>
+                    <input type="text" id="previousVet" class="form-input">
+                  </div>
+                  <div class="form-group">
+                    <label for="previousVetContact" class="form-label">Previous Veterinary Practice Contact Number</label>
+                    <input type="tel" id="previousVetContact" class="form-input">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Consent -->
+              <div class="mb-8" style="padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+                <div class="checkbox-group mb-4">
+                  <input type="checkbox" id="permission" class="checkbox-input" required>
+                  <label for="permission" class="checkbox-label">Do we have permission to contact the previous practice and request your horse's clinical history?</label>
+                </div>
+
+                <div class="checkbox-group mb-4">
+                  <input type="checkbox" id="consent" class="checkbox-input" required>
+                  <label for="consent" class="checkbox-label">I agree to your Terms & Conditions and Privacy Policy</label>
+                </div>
+
+                <p class="text-sm text-muted">
+                  Our <a href="terms.html" class="text-accent">Terms and Conditions</a> and <a href="privacy.html" class="text-accent">Privacy Policy</a>
+                </p>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg btn-full">Complete Registration</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>Vet3 Equine Care</h3>
+          <p class="footer-text">Independent equine care team operating across Norfolk & Suffolk, providing 24/7 on-call support for your horses.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="zone-visit.html">Zone Visit</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <div class="footer-contact">
+            <i data-feather="phone" class="footer-contact-icon"></i>
+            <div><strong>24/7 Emergency</strong><br><a href="tel:01603123456">01603 123 456</a></div>
+          </div>
+          <div class="footer-contact">
+            <i data-feather="mail" class="footer-contact-icon"></i>
+            <a href="mailto:info@vet3equine.co.uk">info@vet3equine.co.uk</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i data-feather="facebook" class="footer-social-icon"></i></a>
+            <a href="https://instagram.com/vet3equine" target="_blank" aria-label="Instagram"><i data-feather="instagram" class="footer-social-icon"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">Vet3 Equine Care Limited is an Introducer Appointed Representative of Agria Pet Insurance Ltd...</p>
+        <p class="footer-copyright">&copy; 2024 Vet3 Equine Care. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>feather.replace()</script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
