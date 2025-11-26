@@ -146,13 +146,57 @@ const Home = () => {
               Comprehensive equine veterinary care tailored to your horse's needs
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
-            {services.map((service) => (
-              <ServiceCard key={service.title} {...service} />
-            ))}
+          
+          {/* Mobile: Stacked full-width cards | Desktop: Horizontal split layout */}
+          <div className="max-w-6xl mx-auto mb-8">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+              {/* Featured Service - Takes full width on mobile, half on desktop */}
+              <div className="md:w-1/2 bg-accent text-accent-foreground rounded-2xl p-8 md:p-10 flex flex-col justify-between">
+                <div>
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-accent-foreground/10 rounded-xl mb-6">
+                    <Shield className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                    {services[0].title}
+                  </h3>
+                  <p className="text-lg opacity-90 mb-6">
+                    {services[0].description}
+                  </p>
+                </div>
+                <Button asChild variant="secondary" size="lg" className="w-full md:w-auto">
+                  <a href="tel:01603123456">Call Emergency Line</a>
+                </Button>
+              </div>
+              
+              {/* Other Services - Stacked on mobile, stacked in right column on desktop */}
+              <div className="md:w-1/2 flex flex-col gap-4">
+                {services.slice(1).map((service) => {
+                  const Icon = service.icon;
+                  return (
+                    <div
+                      key={service.title}
+                      className="bg-secondary rounded-2xl p-6 flex items-start gap-4 hover:shadow-md transition-shadow"
+                    >
+                      <div className="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
+                        <Icon className="h-6 w-6 text-accent" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-xl font-bold text-foreground mb-2">
+                          {service.title}
+                        </h3>
+                        <p className="text-muted-foreground">
+                          {service.description}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
+          
           <div className="text-center">
-            <Button asChild size="lg">
+            <Button asChild size="lg" variant="outline">
               <Link to="/services">View All Services</Link>
             </Button>
           </div>
