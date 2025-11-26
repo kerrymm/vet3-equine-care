@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Vet3 Equine Care | Get in Touch with Norfolk & Suffolk's Independent Equine Vets</title>
+  <meta name="description" content="Contact Vet3 Equine Care - Independent mobile equine vets serving Norfolk & Suffolk. 24/7 emergency line, WhatsApp support, and email enquiries for professional horse veterinary services.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../css/styles.css">
+  
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <img src="../assets/logo.png" alt="Vet3 Equine Care">
+      </a>
+      
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="navbar-link">Home</a></li>
+        <li><a href="about.html" class="navbar-link">About</a></li>
+        <li><a href="services.html" class="navbar-link">Services</a></li>
+        <li><a href="zone-visit.html" class="navbar-link">Zone Visit</a></li>
+        <li><a href="contact.html" class="navbar-link active">Contact</a></li>
+        <li><a href="register.html" class="btn btn-primary btn-sm">Register</a></li>
+        <li><a href="tel:01603123456" class="btn btn-outline btn-sm"><i data-feather="phone" class="icon-sm"></i> <span class="hide-mobile">24/7 On-Call</span></a></li>
+      </ul>
+      
+      <button class="navbar-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    
+    <div class="navbar-mobile">
+      <a href="index.html" class="navbar-link">Home</a>
+      <a href="about.html" class="navbar-link">About</a>
+      <a href="services.html" class="navbar-link">Services</a>
+      <a href="zone-visit.html" class="navbar-link">Zone Visit</a>
+      <a href="contact.html" class="navbar-link active">Contact</a>
+      <a href="register.html" class="btn btn-primary btn-full">Register Your Horse</a>
+      <a href="tel:01603123456" class="btn btn-outline btn-full"><i data-feather="phone" class="icon-sm"></i> 24/7 On-Call Support</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center section-header">
+        <h1>Get In Touch</h1>
+        <p class="text-lg text-muted">Have a question or need assistance? We're here to help.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Contact Info Cards -->
+        <div class="contact-info-column">
+          <div class="card contact-card">
+            <div class="card-icon">
+              <i data-feather="phone" class="icon-md"></i>
+            </div>
+            <h3>Phone</h3>
+            <p class="text-sm text-muted">24/7 Emergency Line</p>
+            <a href="tel:01603123456" class="contact-link">01603 123 456</a>
+          </div>
+
+          <div class="card contact-card">
+            <div class="card-icon">
+              <i data-feather="message-circle" class="icon-md"></i>
+            </div>
+            <h3>WhatsApp</h3>
+            <p class="text-sm text-muted">Only 8:30am - 5:30pm</p>
+            <a href="https://wa.me/441603123456" class="contact-link">01603 123 456</a>
+          </div>
+
+          <div class="card contact-card">
+            <div class="card-icon">
+              <i data-feather="mail" class="icon-md"></i>
+            </div>
+            <h3>Email</h3>
+            <p class="text-sm text-muted">For general enquiries</p>
+            <a href="mailto:info@vet3equine.co.uk" class="contact-link">info@vet3equine.co.uk</a>
+          </div>
+
+          <div class="card contact-card">
+            <div class="card-icon">
+              <i data-feather="map-pin" class="icon-md"></i>
+            </div>
+            <h3>Location</h3>
+            <p class="text-sm text-muted">Serving Norfolk & Suffolk</p>
+          </div>
+
+          <div class="card contact-card">
+            <div class="card-icon">
+              <i data-feather="clock" class="icon-md"></i>
+            </div>
+            <h3>Hours</h3>
+            <p class="text-sm text-muted">Emergency services available 24/7</p>
+            <p class="text-sm text-muted">Office hours: Mon-Fri, 9am-5pm</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="lg:col-span-2">
+          <div class="card">
+            <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+            <form class="form" id="contactForm">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label for="contactFirstName" class="form-label">First Name *</label>
+                  <input type="text" id="contactFirstName" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="contactLastName" class="form-label">Last Name *</label>
+                  <input type="text" id="contactLastName" class="form-input" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Email Address *</label>
+                <input type="email" id="contactEmail" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactPhone" class="form-label">Phone Number</label>
+                <input type="tel" id="contactPhone" class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject *</label>
+                <input type="text" id="subject" class="form-input" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message *</label>
+                <textarea id="message" class="form-textarea" rows="6" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg btn-full">Send Message</button>
+
+              <p class="text-sm text-muted text-center" style="margin-top: 1rem;">
+                We aim to respond to all enquiries within 24 hours during office hours. For urgent matters, please call our 24/7 emergency line.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>Vet3 Equine Care</h3>
+          <p class="footer-text">Independent equine care team operating across Norfolk & Suffolk, providing 24/7 on-call support for your horses.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="zone-visit.html">Zone Visit</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <div class="footer-contact">
+            <i data-feather="phone" class="footer-contact-icon"></i>
+            <div>
+              <strong>24/7 Emergency</strong><br>
+              <a href="tel:01603123456">01603 123 456</a>
+            </div>
+          </div>
+          <div class="footer-contact">
+            <i data-feather="mail" class="footer-contact-icon"></i>
+            <a href="mailto:info@vet3equine.co.uk">info@vet3equine.co.uk</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i data-feather="facebook" class="footer-social-icon"></i>
+            </a>
+            <a href="https://instagram.com/vet3equine" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i data-feather="instagram" class="footer-social-icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">Vet3 Equine Care Limited is an Introducer Appointed Representative of Agria Pet Insurance Ltd...</p>
+        <p class="footer-copyright">&copy; 2024 Vet3 Equine Care. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>feather.replace()</script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
