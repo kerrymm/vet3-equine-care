@@ -17,21 +17,24 @@ This guide provides everything you need to recreate the Vet3 Equine Care website
 Vet3 Equine Care Website
 │
 ├── Home (/)
-│   ├── Hero Section with CTA
-│   ├── Services Overview (3 cards)
-│   ├── About Preview
-│   ├── Emergency CTA
+│   ├── Hero Section with CTA (Image Overlay)
+│   ├── About Preview with Emergency CTA
+│   ├── Team Preview (3 staff cards)
+│   ├── Services Preview (6 cards)
+│   ├── Testimonials (3 cards)
+│   ├── Zone Visit CTA Section
 │   └── Registration CTA
 │
 ├── About (/about)
 │   ├── Mission Hero
-│   ├── Team Section (4 staff cards)
-│   ├── Instagram Feed Preview
+│   ├── Team Section (7 staff cards)
+│   ├── Instagram Feed Preview (8 posts)
 │   └── Registration CTA
 │
 ├── Services (/services)
 │   ├── Services Hero
-│   ├── Service Cards Grid (6 services)
+│   ├── Mobile Accordion (16 services)
+│   ├── Desktop Service Cards Grid (16 services)
 │   ├── Emergency Info Banner
 │   └── Registration CTA
 │
@@ -47,7 +50,7 @@ Vet3 Equine Care Website
 ├── Zone Visit (/zone-visit)
 │   ├── Zone Info Hero
 │   ├── Interactive Map Placeholder
-│   ├── Zone Cards Grid (4 zones)
+│   ├── Zone Cards Grid (6 zones)
 │   ├── About Zone Visits
 │   └── Enquiry Form
 │
@@ -63,41 +66,46 @@ Vet3 Equine Care Website
 ## Component Library Mapping
 
 ### Navigation Components
-- **Main Navigation**: `Header 1` or `Header 2` (with logo left, nav center/right, CTA button)
-- **Mobile Menu**: Built-in hamburger menu functionality
+- **Main Navigation**: `Navbar 1` or `Navbar 2` (with logo left, nav links, mobile hamburger menu)
+- **Mobile Menu**: Responsive hamburger menu with slide-out functionality
 
 ### Hero Components
 | Page | Relume Component | Notes |
 |------|-----------------|-------|
-| Home | `Header 76` or `Header 1` | Full-screen hero with background image overlay, centered text, dual CTAs |
-| About | `Header 3` or `Header 5` | Centered hero with headline and description |
-| Services | `Header 2` | Image + text layout |
-| Register | `Header 4` | Simple centered header with form focus |
-| Contact | `Header 6` | Split layout with info cards |
-| Zone Visit | `Header 3` | Centered with map preview |
+| Home | `Header 1` or `Header 76` | Full-screen hero (500-600px) with background image overlay, white text overlay, dual CTAs |
+| About | `Header 3` or `Header 2` | Centered hero with headline and description, light background |
+| Services | `Header 2` or `Header 3` | Simple centered layout with headline and description |
+| Register | `Header 4` or `Header 2` | Simple centered header with headline and description |
+| Contact | `Header 2` or `Header 3` | Centered layout with headline and description |
+| Zone Visit | `Header 2` or `Header 3` | Centered with headline and description |
 
 ### Content Sections
 
 #### Card Grids
-- **Services Grid** (3 or 6 cards): `Layout 4`, `Layout 5`, or `Layout 243`
-- **Staff Team Grid** (4 cards): `Team 1`, `Team 2`, or `Team 4`
-- **Zone Cards Grid** (4 cards): `Layout 4` or `Layout 243`
-- **Contact Info Cards** (4 cards): `Layout 390` or `Contact 1`
+- **Services Grid Home** (6 cards in 3 columns): `Layout 4`, `Layout 5`, or `Layout 243`
+- **Services Grid Full** (16 cards): `Layout 4` with accordion on mobile, `Layout 243` grid on desktop
+- **Staff Team Grid Home** (3 cards): `Team 1`, `Team 2`, or `Team 6`
+- **Staff Team Grid Full** (7 cards in 3 columns): `Team 1`, `Team 2`, or `Team 4`
+- **Zone Cards Grid** (6 cards in 3 columns): `Layout 4` or `Layout 243`
+- **Contact Info Cards** (5 vertical cards): `Layout 390` or `Contact 1`
+- **Testimonials Grid** (3 cards): `Testimonial 1`, `Testimonial 2`, or `Testimonial 17`
 
 #### CTAs & Banners
-- **Emergency CTA**: `CTA 1` or `CTA 26` (centered with icon and button)
-- **Registration CTA**: `CTA 2` or `CTA 8` (with background and button)
-- **Info Banners**: `Content 3` or `Banner 1`
+- **Emergency CTA Inline**: Phone number with icon in colored box (custom component or `Contact 5`)
+- **Emergency CTA Banner**: `CTA 1` or `CTA 26` (centered with text, icon, and button)
+- **Registration CTA**: `CTA 2` or `CTA 8` (full-width with dark background and button)
+- **Zone Visit CTA**: `CTA 4` or custom card with icon, headline, description, and button
+- **Info Banners**: `Banner 1` or `Banner 2`
 
 #### Forms
-- **Registration Form**: `Contact 10`, `Contact 14`, or `Form 1` (multi-field form with sections)
-- **Contact Form**: `Contact 2` or `Contact 4` (standard 5-field form)
-- **Zone Enquiry Form**: `Contact 3` or `Form 2` (detailed form with text area)
+- **Registration Form**: `Contact 10`, `Contact 14`, or `Form 1` (multi-section form: Owner Info, Horse Info, Address, Previous Vet, Consent)
+- **Contact Form**: `Contact 2` or `Contact 4` (2-column layout with contact cards on left, form on right)
+- **Zone Enquiry Form**: `Contact 3` or `Form 2` (compact form with name, email, phone, postcode, address, message)
 
 #### Content Sections
-- **About Text Blocks**: `Content 1` or `Content 2` (text with optional image)
-- **Instagram Feed**: `Gallery 1` or `Gallery 2` (grid layout with CTA)
-- **FAQ/Accordion**: `FAQ 1` or `FAQ 2` (for services details if needed)
+- **About Text Blocks**: `Content 1` or `Content 2` (centered text with optional image)
+- **Instagram Feed**: `Gallery 1` or `Gallery 2` (4-column grid, 2 columns on tablet, 8 placeholder posts)
+- **Accordion Services**: `FAQ 1` or `Accordion 1` (mobile-only accordion with icon, title, description)
 
 ### Footer
 - **Footer Component**: `Footer 1` or `Footer 4`
@@ -115,32 +123,45 @@ Vet3 Equine Care Website
 
 **Component Stack:**
 ```
-1. Header 76 - Hero Section
-   - Background: Full-screen image overlay
-   - Headline: "Expert Mobile Equine Veterinary Care"
-   - Subheadline: "Across Norfolk & Suffolk"
-   - Description: "Professional, compassionate veterinary care..."
-   - CTA Primary: "Book an Appointment"
-   - CTA Secondary: "Call 24/7: 01603 555 0123"
+1. Header 1 or Header 76 - Hero Section
+   - Background: Full-screen image (500-600px) with dark overlay
+   - Headline: "Fully Mobile Independent Equine Vets"
+   - Description: Independent, mobile practice details
+   - CTA Primary: "Register Your Horse" (accent color)
+   - CTA Secondary: "Call 24/7 Support" (outline, white text)
 
-2. Layout 5 - Services Preview (3 cards)
-   - Title: "Our Services"
-   - 3 cards: Routine Care, Emergency Services, Specialized Treatments
-   - Each card: Icon, title, description, "Learn More" link
+2. Content 2 - About Preview
+   - Headline: "Fully Mobile Independent Equine Vets"
+   - Text: Mission statement about mobile service
+   - Emergency CTA Box: Phone icon + number in colored rounded box
 
-3. Content 2 - About Preview
-   - Headline: "Dedicated to Your Horse's Health"
-   - Text: Mission statement
-   - Image: Team photo (optional)
+3. Team 6 or Team 2 - Team Preview (3 cards)
+   - Title: "Meet Our Team"
+   - Description: Team introduction
+   - 3 team members with name, role, short bio
+   - CTA: "Meet the Full Team" button
 
-4. CTA 26 - Emergency Banner
-   - Icon: Phone/Clock
-   - Text: "24/7 Emergency Service Available"
-   - Button: "Call Now: 01603 555 0123"
+4. Layout 5 - Services Preview (6 cards)
+   - Title: "Independent Equine Veterinary Services"
+   - Description: Service overview
+   - 6 service cards: Icon, title, description
+   - CTA: "View All Services" button
 
-5. CTA 2 - Registration CTA
-   - Headline: "New Client?"
-   - Description: "Register your horse today"
+5. Testimonial 17 or Testimonial 2 - Testimonials (3 cards)
+   - Title: "What Our Clients Say"
+   - Description: "Trusted by horse owners..."
+   - 3 testimonial cards with quote, name, location
+
+6. CTA 4 - Zone Visit Section
+   - Card with icon, headline, description, button
+   - "Are We In Your Area?"
+   - CTA: "View Zone Map & Schedule"
+   - Secondary: Phone number link
+
+7. CTA 2 - Registration CTA
+   - Full-width dark background
+   - Headline: "Join Our Independent Equine Practice"
+   - Description: Registration benefits
    - Button: "Register Now"
 ```
 
@@ -148,22 +169,28 @@ Vet3 Equine Care Website
 
 **Component Stack:**
 ```
-1. Header 3 - Mission Hero
-   - Headline: "Meet Our Team"
-   - Description: "Experienced veterinarians dedicated..."
+1. Header 2 or Header 3 - Mission Hero
+   - Headline: "Meet Our Fully Mobile Independent Equine Veterinary Team"
+   - Description: Team mission and mobile service details
 
-2. Team 4 - Staff Grid (4 cards)
-   - 4 team members with photos
-   - Each card: Name, role, bio
+2. Team 4 or Team 1 - Staff Grid (7 cards)
+   - 3-column grid (responsive)
+   - 7 team members with name, role, bio
+   - Placeholder images (initials if no photo)
 
-3. Gallery 2 - Instagram Feed
-   - Title: "Follow Us on Instagram"
-   - 6-image grid placeholder
-   - CTA: "View Instagram" button
+3. Gallery 2 or Gallery 1 - Instagram Feed
+   - Title: "Follow Our Journey"
+   - Instagram icon with headline
+   - Description and @handle link
+   - 8-image grid placeholder (4 columns, 2 on tablet, 2 on mobile)
+   - Placeholders show "Post 1", "Post 2", etc.
+   - CTA: "@vet3equine" button
+   - Note about connecting Instagram account
 
-4. CTA 8 - Registration CTA
-   - Background color/gradient
-   - Headline: "Ready to get started?"
+4. CTA 2 or CTA 8 - Registration CTA
+   - Dark navy background
+   - Headline: "Experience Independent Equine Veterinary Excellence"
+   - Description: Registration benefits
    - Button: "Register Your Horse"
 ```
 
@@ -171,28 +198,36 @@ Vet3 Equine Care Website
 
 **Component Stack:**
 ```
-1. Header 2 - Services Hero
-   - Split layout: image + text
-   - Headline: "Comprehensive Veterinary Services"
-   - Description: Service overview
+1. Header 2 or Header 3 - Services Hero
+   - Headline: "Fully Mobile Independent Equine Vets - Norfolk & Suffolk"
+   - Description: Mobile service and zone visits overview
 
-2. Layout 243 - Services Grid (6 cards)
-   - Title: "What We Offer"
-   - 6 service cards:
-     * Routine Care & Wellness
-     * Emergency Services
-     * Dental Care
-     * Lameness Evaluation
-     * Pre-Purchase Examinations
-     * Vaccinations & Health Plans
-   - Each card: Icon, title, description
+2A. Accordion 1 or FAQ 1 - Services Mobile (16 services)
+   - MOBILE ONLY: Accordion layout
+   - 16 expandable items
+   - Each item: Icon, title in header; description in expanded content
+   - All major services: Routine visits, Vaccinations, Microchipping, Dentistry,
+     Castrations, Reproductive services, PPE, Lameness, Shockwave therapy,
+     Medical workups, Respiratory endoscopy, Gastroscopy, Export certification,
+     Referrals, Mobile diagnostics, Small animal euthanasia
 
-3. Banner 1 - Emergency Info
-   - Background: Accent color
-   - Text: "Emergency? Call us immediately..."
-   - Phone number prominent
+2B. Layout 243 or Layout 4 - Services Desktop (16 services)
+   - DESKTOP ONLY: Grid layout (2-3 columns)
+   - Same 16 services as mobile
+   - Each card: Icon in colored circle, title, description
+   - Hover effect with shadow
+
+3. Banner 1 or CTA 26 - Emergency Banner
+   - Light accent background
+   - Headline: "Need Immediate Assistance?"
+   - Description: "24/7 emergency line..."
+   - Button: "Call Now: 01603 123 456" with phone icon
 
 4. CTA 2 - Registration CTA
+   - Dark navy background
+   - Headline: "Register with Independent Equine Vets"
+   - Description: Registration benefits
+   - Two buttons: "Register Your Horse" + "Check Your Zone"
 ```
 
 ### 4. REGISTER PAGE
@@ -233,47 +268,56 @@ Vet3 Equine Care Website
 
 **Component Stack:**
 ```
-1. Header 6 - Contact Hero
-   - Split layout with contact overview
+1. Header 2 or Header 3 - Contact Hero
+   - Headline: "Get In Touch"
+   - Description: Contact invitation
 
-2. Layout 390 - Contact Info Cards (4 cards)
-   - Phone Card: "01603 555 0123"
-   - WhatsApp Card: "07700 900 000"
-   - Email Card: "info@vet3equine.co.uk"
-   - Location Card: "Norfolk & Suffolk"
+2. Contact 1 or Layout 390 - Contact Info Cards (5 cards)
+   - LAYOUT: Single column on left side
+   - Phone Card: Icon, "Phone", description, 24/7 emergency number
+   - WhatsApp Card: Icon, "WhatsApp", hours, number with link
+   - Email Card: Icon, "Email", description, email link
+   - Location Card: Icon, "Location", "Serving Norfolk & Suffolk"
+   - Hours Card: Icon, "Hours", emergency + office hours
 
-3. Contact 2 - Contact Form
-   - Fields: Name, Email, Phone, Subject, Message
+3. Contact 2 or Contact 4 - Contact Form
+   - LAYOUT: 2-column grid (cards left, form right)
+   - Form card with title "Send Us a Message"
+   - Fields: First Name, Last Name (2 columns), Email, Phone, Subject, Message
    - Submit button: "Send Message"
+   - Note about response time at bottom
 ```
 
 ### 6. ZONE VISIT PAGE
 
 **Component Stack:**
 ```
-1. Header 3 - Zone Hero
+1. Header 2 or Header 3 - Zone Hero
    - Headline: "Zone Visit Schedule"
-   - Description: "Regular scheduled visits..."
+   - Description: "Regular scheduled visits across Norfolk & Suffolk..."
 
-2. Content 1 - Map Placeholder
-   - Title: "Service Areas"
-   - Text: "View our coverage map"
-   - Image placeholder for interactive map
+2. Content 1 - Map Placeholder Card
+   - Large card with aspect-video ratio
+   - MapPin icon, title, description
+   - Placeholder for interactive map
 
-3. Layout 4 - Zone Cards (4 cards)
-   - Zone A: North Norfolk (Mon, Thu)
-   - Zone B: South Norfolk (Tue, Fri)
-   - Zone C: East Suffolk (Wed)
-   - Zone D: West Suffolk (Wed)
-   - Each card: Zone name, areas covered, visit days
+3. Layout 4 or Layout 243 - Zone Cards (6 cards)
+   - 3-column grid (responsive: 1 col mobile, 2 col tablet, 3 col desktop)
+   - Zone A: North Norfolk (Mon, Thu) - Cromer, Sheringham, North Walsham
+   - Zone B: Norwich & Surrounds (Tue, Fri) - Norwich, Wymondham, Dereham
+   - Zone C: South Norfolk (Wed) - Diss, Thetford, Attleborough
+   - Zone D: Suffolk North (Mon, Thu) - Lowestoft, Beccles, Bungay
+   - Zone E: Suffolk South (Tue, Fri) - Ipswich, Stowmarket, Bury St Edmunds
+   - Zone F: Suffolk Coast (Wed) - Southwold, Aldeburgh, Woodbridge
+   - Each card: Zone name (title), areas (description), days with calendar icon
 
-4. Content 2 - About Zone Visits
-   - Headline: "How Zone Visits Work"
-   - Bullet points explaining the service
-
-5. Contact 3 - Zone Enquiry Form
-   - Fields: Name, Email, Phone, Postcode, Address, Details
-   - Submit: "Send Enquiry"
+4. Contact 3 or Contact 10 - Zone Information & Form
+   - 2-column grid layout
+   - LEFT: Info card "About Zone Visits" with bullet points and emergency note
+   - RIGHT: Enquiry form card with fields:
+     * Name, Email, Phone (required)
+     * Postcode (required), Address, Additional Information
+     * Submit: "Send Enquiry"
 ```
 
 ### 7. TERMS & CONDITIONS PAGE
@@ -365,27 +409,44 @@ Include:
 
 ### Services Grid Prompt
 ```
-Create a 6-card services grid for equine veterinary services:
-1. Routine Care & Wellness - Regular check-ups, wellness exams, preventive care
-2. Emergency Services - 24/7 emergency response for critical situations
-3. Dental Care - Complete dental examinations and treatments
-4. Lameness Evaluation - Comprehensive assessment and treatment plans
-5. Pre-Purchase Examinations - Thorough evaluation for buying horses
-6. Vaccinations & Health Plans - Customized vaccination schedules
+Create a 16-card services grid (or accordion for mobile) for equine veterinary services:
+1. Routine Visits and Examinations
+2. Vaccinations
+3. Equine Passport and Microchipping
+4. Dentistry (motorised, wolf tooth removal)
+5. Castrations
+6. Reproductive Services and Artificial Insemination
+7. Pre Purchase Examination (PPE) and Radiography
+8. Onsite Lameness Workups
+9. Extracorporeal Shockwave Therapy and Class IV Laser Treatment
+10. Medical Workups
+11. Respiratory Endoscopy
+12. Gastroscopy
+13. Export Certification
+14. Referrals
+15. Fully Mobile Diagnostics
+16. Home Euthanasia for Small Animals
 
-Each card should have an icon, title, and short description.
+Mobile: Accordion layout with expandable items
+Desktop: 2-3 column grid
+Each card: Icon in colored circle, title, description
 Style: Clean, professional, medical
 ```
 
 ### Team Section Prompt
 ```
-Create a team section with 4 staff members for a veterinary practice:
-1. Dr. Sarah Mitchell - Lead Veterinarian - 15+ years experience in equine medicine
-2. Dr. James Cooper - Associate Veterinarian - Specialist in lameness and sports medicine
-3. Emma Thompson - Veterinary Nurse - Certified in equine emergency care
-4. Lisa Parker - Practice Manager - Coordinates care and client communications
+Create a team section with 7 staff members for an independent equine veterinary practice:
+1. Dr. Sarah Mitchell - Lead Veterinarian - 20+ years equine experience, sports medicine
+2. Dr. James Anderson - Senior Veterinarian - Equine reproduction and internal medicine
+3. Emily Roberts - Veterinary Nurse - 10 years experience, exceptional nursing care
+4. Dr. Michael Chen - Veterinarian - Equine lameness and diagnostic imaging specialist
+5. Lucy Thompson - Veterinary Nurse - Patient care and client education
+6. Dr. Rebecca Foster - Veterinarian - 8 years in equine dentistry and preventive care
+7. Tom Williams - Practice Manager - Operations and client services
 
-Include photo placeholders and brief bios.
+Home page: Show first 3 members with CTA to "Meet the Full Team"
+About page: Show all 7 members in 3-column grid
+Include photo placeholders (show initials if no photo) and bio paragraphs
 Style: Approachable, professional, trustworthy
 ```
 
@@ -605,15 +666,15 @@ Style: Multi-step or sectioned layout, clear labels, good spacing
 If you want to generate the entire site with one AI prompt in Relume, use this:
 
 ```
-Create a complete website for Vet3 Equine Care, a mobile veterinary practice serving horses in Norfolk & Suffolk, UK.
+Create a complete website for Vet3 Equine Care, a fully mobile independent equine veterinary practice serving Norfolk & Suffolk, UK.
 
 SITEMAP:
-- Home
-- About (team of 4)
-- Services (6 services)
-- Register (multi-step form)
-- Contact (info + form)
-- Zone Visit (4 zones + enquiry form)
+- Home (hero + about preview + team preview (3) + services (6) + testimonials (3) + zone CTA + register CTA)
+- About (hero + team of 7 + Instagram feed (8 posts) + register CTA)
+- Services (hero + 16 services with accordion mobile/grid desktop + emergency banner + register CTA)
+- Register (hero + multi-section form with owner/horse/address/previous vet/consent)
+- Contact (hero + 5 info cards + contact form in 2-column layout)
+- Zone Visit (hero + map placeholder + 6 zone cards + info section + enquiry form)
 - Terms & Conditions
 - Privacy Policy
 
