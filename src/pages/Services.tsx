@@ -77,8 +77,8 @@ const Services = () => {
     },
     {
       icon: Clock,
-      title: "Zone Visits",
-      description: "Scheduled visits to designated zones across Norfolk & Suffolk.",
+      title: "Regular Zone Visits",
+      description: "Fully mobile service with organised zone visits across Norfolk & Suffolk for convenient, accessible equine care at your yard.",
     },
   ];
 
@@ -91,10 +91,10 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Independent Equine Veterinary Services Norfolk & Suffolk
+              Fully Mobile Independent Equine Vets - Norfolk & Suffolk
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              As an independent equine veterinary practice, we provide comprehensive horse care tailored to each animal's unique needs. From 24/7 emergency care to routine check-ups, our independent vets deliver professional, personalised equine healthcare across Norfolk and Suffolk.
+              As a fully mobile independent equine veterinary practice, we bring comprehensive horse care directly to your yard. With regular zone visits across Norfolk and Suffolk, our independent mobile vets deliver professional, personalised equine healthcare wherever you are. From 24/7 emergency care to routine check-ups, we come to you.
             </p>
           </div>
         </div>
