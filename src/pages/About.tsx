@@ -9,7 +9,7 @@ const About = () => {
     {
       name: "Dr. Sarah Mitchell",
       role: "Lead Veterinarian",
-      bio: "With over 20 years of equine veterinary experience, Sarah specializes in sports medicine and emergency care. She founded Vet3 as an independent practice to provide personalized, high-quality equine care free from corporate pressures—putting horses first across Norfolk & Suffolk.",
+      bio: "With over 20 years of equine veterinary experience, Sarah specialises in sports medicine and emergency care. She founded Vet3 as an independent practice to provide personalised, high-quality equine care free from corporate pressures—putting horses first across Norfolk & Suffolk.",
     },
     {
       name: "Dr. James Anderson",
@@ -24,7 +24,7 @@ const About = () => {
     {
       name: "Dr. Michael Chen",
       role: "Veterinarian",
-      bio: "Michael specializes in equine lameness and diagnostic imaging. With 12 years of experience, he combines the latest technology with traditional veterinary principles for optimal outcomes.",
+      bio: "Michael specialises in equine lameness and diagnostic imaging. With 12 years of experience, he combines the latest technology with traditional veterinary principles for optimal outcomes.",
     },
     {
       name: "Lucy Thompson",
@@ -55,7 +55,7 @@ const About = () => {
               Meet Our Independent Equine Veterinary Team
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              As a proudly independent equine veterinary practice, our team makes every decision based on your horse's best interests—not corporate profit margins. Our experienced independent vets provide the highest standard of personalized equine care across Norfolk and Suffolk. With 24/7 on-call emergency support, we're here whenever you need us.
+              As a proudly independent equine veterinary practice, our team makes every decision based on your horse's best interests—not corporate profit margins. Our experienced independent vets provide the highest standard of personalised equine care across Norfolk and Suffolk. With 24/7 on-call emergency support, we're here whenever you need us.
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@ const About = () => {
             Experience Independent Equine Veterinary Excellence
           </h2>
           <p className="text-lg mb-8 opacity-95 max-w-2xl mx-auto">
-            Our independent veterinary team is ready to provide exceptional, personalized care for your horses. Register today to access professional equine healthcare from vets who answer only to you and your horse's needs.
+            Our independent veterinary team is ready to provide exceptional, personalised care for your horses. Register today to access professional equine healthcare from vets who answer only to you and your horse's needs.
           </p>
           <Button asChild size="lg" variant="secondary">
             <Link to="/register">Register Your Horse</Link>

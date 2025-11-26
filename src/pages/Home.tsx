@@ -65,7 +65,7 @@ const Home = () => {
                 Independent Equine Vets Serving Norfolk & Suffolk
               </h1>
               <p className="text-lg md:text-xl mb-8 opacity-95">
-                Proudly independent veterinary practice offering 24/7 emergency equine care. Professional, personalized service for your horses with no corporate constraints.
+                Proudly independent veterinary practice offering 24/7 emergency equine care. Professional, personalised service for your horses with no corporate constraints.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -91,7 +91,7 @@ const Home = () => {
               Why Choose Our Independent Equine Practice?
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              As an independent equine veterinary practice, Vet3 offers personalized care without corporate pressures. Our dedicated team of independent vets serves horses across Norfolk and Suffolk with 24/7 emergency support. We make decisions based solely on your horse's wellbeing, providing professional equine healthcare with genuine attention to each animal.
+              As an independent equine veterinary practice, Vet3 offers personalised care without corporate pressures. Our dedicated team of independent vets serves horses across Norfolk and Suffolk with 24/7 emergency support. We make decisions based solely on your horse's wellbeing, providing professional equine healthcare with genuine attention to each animal.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 p-6 bg-secondary rounded-2xl max-w-2xl mx-auto">
@@ -141,7 +141,7 @@ const Home = () => {
               Independent Equine Veterinary Services
             </h2>
             <p className="text-lg text-muted-foreground">
-              Comprehensive, personalized equine care from independent vets who put your horse first
+              Comprehensive, personalised equine care from independent vets who put your horse first
             </p>
           </div>
           
@@ -208,7 +208,7 @@ const Home = () => {
             Join Our Independent Equine Practice
           </h2>
           <p className="text-lg mb-8 opacity-95 max-w-2xl mx-auto">
-            Register with Norfolk and Suffolk's trusted independent equine vets. Experience personalized, professional horse care without corporate constraints. Join hundreds of satisfied horse owners who choose independent veterinary service.
+            Register with Norfolk and Suffolk's trusted independent equine vets. Experience personalised, professional horse care without corporate constraints. Join hundreds of satisfied horse owners who choose independent veterinary service.
           </p>
           <Button asChild size="lg" variant="secondary">
             <Link to="/register">Register Now</Link>
