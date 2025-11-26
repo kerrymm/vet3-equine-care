@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Phone, Clock, Shield, MapPin } from "lucide-react";
+import { Phone, Stethoscope, Syringe, Heart, Activity, ClipboardCheck, MapPin } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import StaffCard from "@/components/StaffCard";
@@ -28,19 +28,34 @@ const Home = () => {
 
   const services = [
     {
-      icon: Shield,
-      title: "Emergency Care",
-      description: "24/7 on-call emergency veterinary services for your peace of mind.",
+      icon: Stethoscope,
+      title: "Routine Visits and Examinations",
+      description: "Comprehensive health checks to monitor your horse's overall wellbeing.",
     },
     {
-      icon: Clock,
-      title: "Routine Check-ups",
-      description: "Regular health assessments to keep your horses in optimal condition.",
+      icon: Syringe,
+      title: "Vaccinations",
+      description: "Complete vaccination programs to protect against common equine diseases.",
     },
     {
-      icon: Phone,
-      title: "Consultation",
-      description: "Expert advice and guidance for all your equine care needs.",
+      icon: Activity,
+      title: "Dentistry",
+      description: "Advanced motorised dentistry and wolf tooth removal for optimal oral health.",
+    },
+    {
+      icon: Heart,
+      title: "Reproductive Services",
+      description: "Complete breeding management including AI services and health monitoring.",
+    },
+    {
+      icon: ClipboardCheck,
+      title: "Pre Purchase Examination",
+      description: "Thorough independent examinations and radiography for horses being purchased.",
+    },
+    {
+      icon: Activity,
+      title: "Lameness Workups",
+      description: "Complete diagnostic assessment including radiography and ultrasonography at your yard.",
     },
   ];
 
@@ -145,51 +160,30 @@ const Home = () => {
             </p>
           </div>
           
-          {/* Mobile: Stacked full-width cards | Desktop: Horizontal split layout */}
+          {/* Services Grid */}
           <div className="max-w-6xl mx-auto mb-8">
-            <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-              {/* Featured Service - Takes full width on mobile, half on desktop */}
-              <div className="md:w-1/2 bg-accent text-accent-foreground rounded-2xl p-8 md:p-10 flex flex-col justify-between">
-                <div>
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-accent-foreground/10 rounded-xl mb-6">
-                    <Shield className="h-8 w-8" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                    {services[0].title}
-                  </h3>
-                  <p className="text-lg opacity-90 mb-6">
-                    {services[0].description}
-                  </p>
-                </div>
-                <Button asChild variant="secondary" size="lg" className="w-full md:w-auto">
-                  <a href="tel:01603123456">Call Emergency Line</a>
-                </Button>
-              </div>
-              
-              {/* Other Services - Stacked on mobile, stacked in right column on desktop */}
-              <div className="md:w-1/2 flex flex-col gap-4">
-                {services.slice(1).map((service) => {
-                  const Icon = service.icon;
-                  return (
-                    <div
-                      key={service.title}
-                      className="bg-secondary rounded-2xl p-6 flex items-start gap-4 hover:shadow-md transition-shadow"
-                    >
-                      <div className="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service) => {
+                const Icon = service.icon;
+                return (
+                  <div
+                    key={service.title}
+                    className="bg-card rounded-2xl p-6 border border-border hover:shadow-lg transition-shadow"
+                  >
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
                         <Icon className="h-6 w-6 text-accent" />
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-xl font-bold text-foreground mb-2">
-                          {service.title}
-                        </h3>
-                        <p className="text-muted-foreground">
-                          {service.description}
-                        </p>
-                      </div>
+                      <h3 className="font-bold text-foreground text-lg leading-tight pt-2">
+                        {service.title}
+                      </h3>
                     </div>
-                  );
-                })}
-              </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
           
