@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Phone, Stethoscope, Syringe, Heart, Activity, ClipboardCheck, MapPin } from "lucide-react";
+import { Phone, Stethoscope, Syringe, Heart, Activity, ClipboardCheck, MapPin, Quote } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import StaffCard from "@/components/StaffCard";
@@ -56,6 +56,24 @@ const Home = () => {
       icon: Activity,
       title: "Lameness Workups",
       description: "Complete diagnostic assessment including radiography and ultrasonography at your yard.",
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Thompson",
+      location: "Norwich, Norfolk",
+      quote: "The team has been looking after my horses for over 5 years now. Their mobile service is incredibly convenient, and I trust them completely with my horses' health. The care is always thorough and professional.",
+    },
+    {
+      name: "James Mitchell",
+      location: "Bury St Edmunds, Suffolk",
+      quote: "As an independent practice, they really put the horses first. No corporate pressure, just genuine care and expert advice. The pre-purchase examination they conducted was exceptionally detailed and helped me make an informed decision.",
+    },
+    {
+      name: "Emma Richards",
+      location: "Great Yarmouth, Norfolk",
+      quote: "I love that they come to us - it makes such a difference for routine visits and emergencies. The vets are knowledgeable, compassionate, and always take time to explain everything clearly. Highly recommended!",
     },
   ];
 
@@ -191,6 +209,37 @@ const Home = () => {
             <Button asChild size="lg" variant="outline">
               <Link to="/services">View All Services</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Trusted by horse owners across Norfolk and Suffolk
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.name}
+                className="bg-card rounded-2xl p-8 border border-border shadow-sm hover:shadow-md transition-shadow"
+              >
+                <Quote className="h-10 w-10 text-accent/30 mb-4" />
+                <p className="text-muted-foreground leading-relaxed mb-6 italic">
+                  "{testimonial.quote}"
+                </p>
+                <div className="border-t border-border pt-4">
+                  <p className="font-semibold text-foreground">{testimonial.name}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
