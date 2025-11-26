@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -60,6 +60,26 @@ const Contact = () => {
                         <p className="text-sm text-muted-foreground mb-2">24/7 Emergency Line</p>
                         <a
                           href="tel:01603123456"
+                          className="text-accent hover:text-accent/80 font-medium"
+                        >
+                          01603 123 456
+                        </a>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                        <MessageCircle className="h-6 w-6 text-accent" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-2">WhatsApp</h3>
+                        <p className="text-sm text-muted-foreground mb-2">Only 8:30am - 5:30pm</p>
+                        <a
+                          href="https://wa.me/441603123456"
                           className="text-accent hover:text-accent/80 font-medium"
                         >
                           01603 123 456
