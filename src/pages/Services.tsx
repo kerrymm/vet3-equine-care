@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ServiceCard from "@/components/ServiceCard";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import {
   Stethoscope,
   Heart,
@@ -10,75 +15,96 @@ import {
   Syringe,
   FileText,
   Phone,
-  Clock,
-  Shield,
-  Pill,
+  Fingerprint,
+  Zap,
   Microscope,
   Ambulance,
   ClipboardCheck,
+  Share,
+  Flower,
 } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Ambulance,
-      title: "24/7 Emergency Care",
-      description: "Round-the-clock emergency veterinary services for urgent situations.",
-    },
-    {
       icon: Stethoscope,
-      title: "Routine Health Checks",
-      description: "Comprehensive examinations to monitor your horse's overall health.",
+      title: "Routine Visits and Examinations",
+      description: "Comprehensive health checks and examinations to monitor your horse's overall wellbeing and catch any issues early.",
     },
     {
       icon: Syringe,
       title: "Vaccinations",
-      description: "Complete vaccination programs to protect against common equine diseases.",
+      description: "Complete vaccination programs to protect your horse against common equine diseases and maintain immunity.",
+    },
+    {
+      icon: Fingerprint,
+      title: "Equine Passport and Microchipping",
+      description: "Full passport services and microchipping to ensure your horse meets all legal requirements and identification standards.",
     },
     {
       icon: Activity,
-      title: "Lameness Evaluation",
-      description: "Diagnostic assessment and treatment for mobility issues.",
+      title: "Dentistry",
+      description: "Advanced motorised dentistry including routine dental care, wolf tooth removal, and comprehensive oral health management.",
     },
     {
-      icon: FileText,
-      title: "Pre-Purchase Exams",
-      description: "Thorough examinations for horses being considered for purchase.",
+      icon: Activity,
+      title: "Castrations",
+      description: "Professional castration services performed to the highest standards with appropriate aftercare and pain management.",
     },
     {
       icon: Heart,
-      title: "Reproduction Services",
-      description: "Breeding management and reproductive health services.",
-    },
-    {
-      icon: Microscope,
-      title: "Laboratory Services",
-      description: "On-site and external laboratory testing for accurate diagnosis.",
-    },
-    {
-      icon: Pill,
-      title: "Dental Care",
-      description: "Professional equine dentistry for optimal oral health.",
-    },
-    {
-      icon: Shield,
-      title: "Preventive Care",
-      description: "Proactive health management to prevent future issues.",
+      title: "Reproductive Services and Artificial Insemination (AI)",
+      description: "Complete breeding management including AI services, pregnancy diagnosis, and reproductive health monitoring.",
     },
     {
       icon: ClipboardCheck,
-      title: "Health Certificates",
-      description: "Documentation for travel, competitions, and insurance purposes.",
+      title: "Pre Purchase Examination (PPE) and Pre-Purchase Radiography",
+      description: "Thorough independent examinations and radiography for horses being considered for purchase, providing detailed health assessments.",
     },
     {
-      icon: Phone,
-      title: "Telephone Consultation",
-      description: "Expert advice available via phone for non-emergency concerns.",
+      icon: Activity,
+      title: "Onsite Lameness Workups",
+      description: "Complete diagnostic assessment including radiography and ultrasonography to identify and treat mobility issues at your yard.",
     },
     {
-      icon: Clock,
-      title: "Regular Zone Visits",
-      description: "Fully mobile service with organised zone visits across Norfolk & Suffolk for convenient, accessible equine care at your yard.",
+      icon: Zap,
+      title: "Extracorporeal Shockwave Therapy and Class IV Laser Treatment",
+      description: "Advanced therapeutic treatments for injury recovery, pain management, and enhanced healing using cutting-edge technology.",
+    },
+    {
+      icon: Microscope,
+      title: "Medical Workups",
+      description: "Comprehensive diagnostic investigations including blood work and clinical assessments for complex medical cases.",
+    },
+    {
+      icon: Stethoscope,
+      title: "Respiratory Endoscopy",
+      description: "Advanced endoscopic examination of the respiratory tract to diagnose breathing issues and airway conditions.",
+    },
+    {
+      icon: Microscope,
+      title: "Gastroscopy",
+      description: "Internal examination of the stomach to diagnose ulcers and other gastrointestinal conditions affecting your horse's health.",
+    },
+    {
+      icon: FileText,
+      title: "Export Certification",
+      description: "Complete documentation and health certification for horses traveling internationally, ensuring all requirements are met.",
+    },
+    {
+      icon: Share,
+      title: "Referrals",
+      description: "Access to specialist referral services when advanced or specialized treatment is required for your horse.",
+    },
+    {
+      icon: Ambulance,
+      title: "Fully Mobile Diagnostics",
+      description: "Comprehensive diagnostic equipment brought directly to your yard including imaging, laboratory, and assessment tools.",
+    },
+    {
+      icon: Flower,
+      title: "Home Euthanasia for Small Animals",
+      description: "Compassionate end-of-life care for small animals in the comfort of their home. Available by appointment only.",
     },
   ];
 
@@ -100,13 +126,36 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services Accordion */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {services.map((service) => (
-              <ServiceCard key={service.title} {...service} />
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {services.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <AccordionItem 
+                    key={service.title} 
+                    value={`item-${index}`}
+                    className="bg-card rounded-xl border border-border overflow-hidden"
+                  >
+                    <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-muted/50 transition-colors">
+                      <div className="flex items-center gap-4 text-left">
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                          <Icon className="h-5 w-5 text-accent" />
+                        </div>
+                        <span className="font-semibold text-foreground">{service.title}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-4 pt-0">
+                      <p className="text-muted-foreground leading-relaxed pl-14">
+                        {service.description}
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                );
+              })}
+            </Accordion>
           </div>
         </div>
       </section>
