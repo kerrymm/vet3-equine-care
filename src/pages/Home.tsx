@@ -95,10 +95,10 @@ const Home = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-2xl text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-                Fully Mobile Independent Equine Vets
+                Expert Horse Vets Norfolk & Suffolk
               </h1>
               <p className="text-lg md:text-xl mb-8 opacity-95">
-                Proudly independent, fully mobile veterinary practice offering 24/7 emergency equine care. Regular zone visits across Norfolk & Suffolk. Professional, personalised service—we come to you.
+                Independent mobile veterinary practice bringing professional equine care to your yard. 24/7 emergency service and scheduled zone visits across Norfolk & Suffolk.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -121,10 +121,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Fully Mobile Independent Equine Vets
+              Professional Care at Your Stable
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              As a fully mobile independent equine veterinary practice, we bring professional care directly to your yard. With organised zone visits across Norfolk and Suffolk, our independent vets provide convenient, accessible equine healthcare. We come to you, offering personalised service without corporate pressures—making decisions based solely on your horse's wellbeing.
+              We bring comprehensive veterinary care directly to your yard across Norfolk and Suffolk. As an independent practice, we focus on what matters most—your horse's health and wellbeing. No corporate pressures, just expert, personalised equine care with convenient scheduled zone visits.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 p-6 bg-secondary rounded-2xl max-w-2xl mx-auto">
@@ -171,10 +171,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Independent Equine Veterinary Services
+              Comprehensive Equine Veterinary Services
             </h2>
             <p className="text-lg text-muted-foreground">
-              Comprehensive, personalised equine care from independent vets who put your horse first
+              From routine care to advanced diagnostics—complete horse healthcare at your yard
             </p>
           </div>
           
@@ -257,7 +257,7 @@ const Home = () => {
                   Are We In Your Area?
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6">
-                  We're fully mobile independent vets with regular zone visits across Norfolk & Suffolk. Check our zone schedule to see when we visit your area.
+                  Our veterinary team operates scheduled zone visits throughout Norfolk & Suffolk. Find out when we're in your area for convenient appointments.
                 </p>
               </div>
               
@@ -290,10 +290,10 @@ const Home = () => {
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Join Our Independent Equine Practice
+            Register Your Horse Today
           </h2>
           <p className="text-lg mb-8 opacity-95 max-w-2xl mx-auto">
-            Register with Norfolk and Suffolk's trusted independent equine vets. Experience personalised, professional horse care without corporate constraints. Join hundreds of satisfied horse owners who choose independent veterinary service.
+            Join hundreds of satisfied horse owners across Norfolk and Suffolk who trust our veterinary practice. Experience expert, personalised equine care delivered at your yard.
           </p>
           <Button asChild size="lg" variant="secondary">
             <Link to="/register">Register Now</Link>

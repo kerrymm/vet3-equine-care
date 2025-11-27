@@ -117,10 +117,10 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Fully Mobile Independent Equine Vets - Norfolk & Suffolk
+              Complete Equine Veterinary Services Norfolk & Suffolk
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              As a fully mobile independent equine veterinary practice, we bring comprehensive horse care directly to your yard. With regular zone visits across Norfolk and Suffolk, our independent mobile vets deliver professional, personalised equine healthcare wherever you are. From 24/7 emergency care to routine check-ups, we come to you.
+              Comprehensive horse care delivered at your yard. Our veterinary team provides everything from routine check-ups to advanced diagnostics across Norfolk and Suffolk. With 24/7 emergency service and scheduled zone visits, expert care is always accessible.
             </p>
           </div>
         </div>
@@ -215,10 +215,10 @@ const Services = () => {
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Register with Independent Equine Vets
+            Get Started with Expert Equine Care
           </h2>
           <p className="text-lg mb-8 opacity-95 max-w-2xl mx-auto">
-            Join horse owners across Norfolk and Suffolk who trust our independent veterinary practice. Experience comprehensive, personalised equine care from professional independent vets who prioritise your horse's wellbeing above all else.
+            Join horse owners across Norfolk and Suffolk who trust our veterinary practice for comprehensive, personalized care that puts horses first.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" variant="secondary">

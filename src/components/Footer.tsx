@@ -10,8 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Vet3 Equine Care</h3>
             <p className="text-sm opacity-90 mb-4">
-              Independent equine care team operating across Norfolk & Suffolk, providing 24/7 on-call
-              support for your horses.
+              Professional horse veterinary services delivered at your stable. Serving Norfolk & Suffolk with 24/7 emergency support and scheduled visits throughout the region.
             </p>
           </div>
 
