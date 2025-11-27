@@ -1,6 +1,6 @@
 # Kadence Theme & Blocks - Complete Setup Guide for Vet3 Equine Care
 
-This comprehensive guide will walk you through setting up the Vet3 Equine Care website in WordPress using Kadence Theme and Kadence Blocks.
+This comprehensive guide will walk you through setting up the Vet3 Equine Care website in WordPress using Kadence Theme and Kadence Blocks with exact design specifications.
 
 ---
 
@@ -94,79 +94,88 @@ Page Layout: Fullwidth
 
 Access: **Appearance → Customize → General → Colors**
 
-### Configure Global Palette
+### Configure Global Palette (EXACT COLORS FROM DESIGN SYSTEM)
 
 Kadence allows you to set up a global color palette. Configure exactly these colors:
 
 #### Palette Slot 1 - Primary
 ```
 Name: Primary
-Hex: #0B0C1E
-Usage: Main brand color, navigation, primary buttons
+Hex: #090B21
+HSL: hsl(235, 95%, 13%)
+Usage: Main brand color, navigation, primary buttons, dark sections
 ```
 
 #### Palette Slot 2 - Accent
 ```
 Name: Accent
-Hex: #6BC5E8
-Usage: Links, icons, highlights, secondary buttons
+Hex: #54BFED
+HSL: hsl(200, 85%, 65%)
+Usage: Links, icons, highlights, secondary buttons, call-to-action elements
 ```
 
 #### Palette Slot 3 - Foreground
 ```
 Name: Foreground
-Hex: #26283E
-Usage: Body text, headings
+Hex: #131626
+HSL: hsl(235, 50%, 15%)
+Usage: Body text, headings, primary content text
 ```
 
 #### Palette Slot 4 - Background
 ```
 Name: Background
 Hex: #FFFFFF
-Usage: Page backgrounds, card backgrounds
+HSL: hsl(0, 0%, 100%)
+Usage: Page backgrounds, card backgrounds, clean white surfaces
 ```
 
 #### Palette Slot 5 - Secondary
 ```
 Name: Secondary
-Hex: #E8F1F5
-Usage: Section backgrounds, button backgrounds
+Hex: #F0F4F6
+HSL: hsl(200, 20%, 95%)
+Usage: Section backgrounds, hover states, subtle backgrounds
 ```
 
 #### Palette Slot 6 - Muted
 ```
 Name: Muted
-Hex: #F2F5F7
-Usage: Subtle backgrounds, disabled states
+Hex: #F4F7F8
+HSL: hsl(200, 15%, 96%)
+Usage: Subtle backgrounds, disabled states, light sections
 ```
 
 #### Palette Slot 7 - Muted Foreground
 ```
 Name: Muted Text
-Hex: #6B7280
-Usage: Secondary text, descriptions
+Hex: #667080
+HSL: hsl(235, 20%, 50%)
+Usage: Secondary text, descriptions, labels
 ```
 
 #### Palette Slot 8 - Border
 ```
 Name: Border
-Hex: #DEE8ED
-Usage: Card borders, dividers, input borders
+Hex: #D9E3E8
+HSL: hsl(200, 20%, 90%)
+Usage: Card borders, dividers, input borders, separators
 ```
 
 ### Additional Color Settings
 
 **Link Colors**
 ```
-Link Color: Palette - Accent (#6BC5E8)
+Link Color: Palette - Accent (#54BFED)
 Link Hover Color: Darken Accent by 10%
 ```
 
 **Button Default Colors** (we'll configure specific button styles later)
 ```
-Background: Palette - Primary
+Background: Palette - Primary (#090B21)
 Text: #FFFFFF
 Hover Background: Darken Primary by 10%
+Border Radius: 6px
 ```
 
 ---
@@ -184,7 +193,7 @@ Font Family: System Stack
 Font Size: 16px (1rem)
 Line Height: 1.5
 Font Weight: 400 (Regular)
-Color: Palette - Foreground
+Color: Palette - Foreground (#131626)
 ```
 
 ### Heading Fonts
@@ -193,7 +202,7 @@ Color: Palette - Foreground
 ```
 Font Family: System Stack (same as body)
 Font Weight: 700 (Bold)
-Color: Palette - Foreground
+Color: Palette - Foreground (#131626)
 ```
 
 **H1 Settings**
@@ -202,6 +211,7 @@ Font Size Desktop: 60px (3.75rem)
 Font Size Tablet: 48px (3rem)
 Font Size Mobile: 36px (2.25rem)
 Line Height: 1.2
+Letter Spacing: -0.02em
 ```
 
 **H2 Settings**
@@ -210,6 +220,7 @@ Font Size Desktop: 48px (3rem)
 Font Size Tablet: 40px (2.5rem)
 Font Size Mobile: 30px (1.875rem)
 Line Height: 1.3
+Letter Spacing: -0.01em
 ```
 
 **H3 Settings**
@@ -229,6 +240,14 @@ Line Height: 1.4
 Font Weight: 600 (Semibold)
 ```
 
+**Paragraph Settings**
+```
+Font Size: 16px (1rem)
+Line Height: 1.75
+Margin Bottom: 16px
+Color: Palette - Foreground
+```
+
 ---
 
 ## 6. Header Configuration
@@ -241,10 +260,12 @@ Access: **Appearance → Customize → Header**
 ```
 Layout: Standard
 Container: Contained (1280px)
-Height: 80px
+Height Desktop: 80px
+Height Mobile: 64px
 Sticky: Yes
 Background: Palette - Background (#FFFFFF)
-Border Bottom: 1px solid Palette - Border
+Border Bottom: 1px solid Palette - Border (#D9E3E8)
+Z-Index: 50
 ```
 
 ### Header Elements
@@ -253,8 +274,10 @@ Border Bottom: 1px solid Palette - Border
 ```
 Position: Left
 Logo Image: Upload logo.png
-Logo Height: 56px
+Logo Height Desktop: 56px
+Logo Height Mobile: 40px
 Logo Link: Home page
+Padding: 12px 0
 ```
 
 **Navigation Menu**
@@ -271,19 +294,22 @@ Menu Item Styling:
   Font Size: 14px
   Font Weight: 500
   Padding: 8px 16px
-  Border Radius: 8px
+  Border Radius: 8px (0.5rem)
+  Gap Between Items: 8px
   
   Default State:
-    Color: Palette - Muted Text
+    Color: Palette - Muted Text (#667080)
     Background: Transparent
+    Transition: all 0.2s ease
   
   Hover State:
-    Color: Palette - Foreground
-    Background: Palette - Secondary
+    Color: Palette - Foreground (#131626)
+    Background: Palette - Secondary (#F0F4F6)
   
   Active State:
-    Color: Palette - Foreground
-    Background: Palette - Secondary
+    Color: Palette - Foreground (#131626)
+    Background: Palette - Secondary (#F0F4F6)
+    Font Weight: 600
 ```
 
 **Header Buttons**
@@ -292,35 +318,50 @@ Button 1 - Register:
   Text: "Register"
   Link: /register
   Style: Primary
-  Background: Palette - Primary
+  Background: Palette - Primary (#090B21)
   Text Color: #FFFFFF
   Padding: 8px 16px
   Border Radius: 6px
+  Font Size: 14px
+  Font Weight: 500
+  Hover: Opacity 0.9
   
 Button 2 - Phone:
   Text: "24/7 On-Call"
-  Icon: Phone icon
+  Icon: Phone icon (lucide-react)
   Link: tel:01603123456
   Style: Outline
-  Border: 1px solid Palette - Border
-  Text Color: Palette - Foreground
+  Border: 1px solid Palette - Border (#D9E3E8)
+  Text Color: Palette - Foreground (#131626)
   Padding: 8px 16px
   Border Radius: 6px
+  Font Size: 14px
+  Hover: Background Palette - Secondary
 ```
 
 ### Mobile Header
 
 **Mobile Menu**
 ```
-Breakpoint: 768px
-Toggle Icon: Hamburger
+Breakpoint: 768px and below
+Toggle Icon: Hamburger (3 lines)
+Toggle Position: Right
 Slide-in Direction: Right
-Background: Palette - Background
+Background: Palette - Background (#FFFFFF)
 Width: 300px
+Overlay: Yes (with 40% opacity)
 
 Mobile Menu Items:
-  Same as desktop but full-width
+  Display: Vertical stack
+  Full-width buttons
   Padding: 12px 16px
+  Border Bottom: 1px solid Palette - Border
+  Font Size: 16px
+  
+Mobile Header Buttons:
+  Display: Stacked below menu items
+  Full width
+  Margin: 16px 16px 8px 16px
 ```
 
 ---
@@ -335,21 +376,26 @@ Access: **Appearance → Customize → Footer**
 ```
 Enable Footer Builder: Yes
 Number of Rows: 2
-  - Row 1: Main footer content
+  - Row 1: Main footer content (3 columns)
   - Row 2: Bottom bar (disclaimer & copyright)
 ```
 
 **Row 1 - Main Footer**
 ```
-Background: Palette - Primary (#0B0C1E)
+Background: Palette - Primary (#090B21)
 Text Color: #FFFFFF
 Padding: 48px top, 48px bottom
+Padding Mobile: 32px top, 32px bottom
 Container: Contained (1280px)
 
-Columns: 3 columns
-  Column 1 Width: 33%
-  Column 2 Width: 33%
-  Column 3 Width: 33%
+Columns: 3 columns (Desktop)
+  Column 1 Width: 33.33%
+  Column 2 Width: 33.33%
+  Column 3 Width: 33.33%
+  
+Mobile: Stack to 1 column
+Column Gap: 32px
+Row Gap Mobile: 32px
 ```
 
 ### Footer Content
@@ -368,9 +414,12 @@ Styling:
   H3 Font Size: 18px
   H3 Font Weight: 600
   H3 Margin Bottom: 16px
+  H3 Color: #FFFFFF
+  
   P Font Size: 14px
   P Opacity: 0.9
   P Line Height: 1.75
+  P Color: #FFFFFF
 ```
 
 **Column 2 - Quick Links**
@@ -389,11 +438,17 @@ Menu: Create "Footer Menu" with:
 
 Styling:
   H3: "Quick Links"
-  Font Size: 14px
-  Line Height: 2
-  Color: #FFFFFF
-  Opacity: 0.9
-  Hover Opacity: 1
+  H3 Font Size: 18px
+  H3 Font Weight: 600
+  H3 Margin Bottom: 16px
+  H3 Color: #FFFFFF
+  
+  Links Font Size: 14px
+  Links Line Height: 2
+  Links Color: #FFFFFF
+  Links Opacity: 0.9
+  Links Hover Opacity: 1
+  Links Hover: Underline
 ```
 
 **Column 3 - Contact**
@@ -420,22 +475,46 @@ Content:
   [Social Icons - Facebook, Instagram]
 </div>
 ---
+
+Styling:
+  H3 Font Size: 18px
+  H3 Font Weight: 600
+  H3 Margin Bottom: 16px
+  
+  .footer-contact Display: Flex column
+  .footer-contact Gap: 4px
+  .footer-contact Margin Bottom: 16px
+  
+  Strong Font Weight: 600
+  Strong Font Size: 14px
+  Strong Opacity: 0.75
+  
+  Links Font Size: 16px
+  Links Color: #FFFFFF
+  Links Opacity: 0.9
+  Links Hover Opacity: 1
+  
+  .text-xs Font Size: 12px
+  .text-xs Opacity: 0.7
 ```
 
 **Row 2 - Bottom Bar**
 ```
-Background: Palette - Primary
+Background: Palette - Primary (#090B21)
 Text Color: #FFFFFF
 Opacity: 0.75
 Padding: 32px top, 32px bottom
+Padding Mobile: 24px top, 24px bottom
 Border Top: 1px solid rgba(255,255,255,0.2)
 
-Content:
-  - Disclaimer text (left)
-  - Copyright text (center)
-  
+Layout: 2 columns on Desktop, 1 column on Mobile
+  Left: Disclaimer text
+  Right: Copyright text (align right on desktop)
+
 Font Size: 12px
 Line Height: 1.5
+Max Width: 1280px
+Container: Centered
 ```
 
 ---
@@ -453,6 +532,8 @@ Line Height: 1.5
    Header: Show
    Footer: Show
    Content Area: Full Width
+   Remove Title: Yes
+   Remove Container: Yes
    ```
 
 This template will be used for all pages to give you complete control over the layout with Kadence Blocks.
@@ -477,281 +558,449 @@ Template: Fullwidth Blank
 Block: Kadence Row Layout
 Columns: 1
 Background: Image (upload hero-equine-photo.jpg)
-Background Overlay: Palette - Primary at 40% opacity
+Background Overlay: Palette - Primary (#090B21) at 40% opacity
+Background Position: Center
+Background Size: Cover
 Min Height: 500px (mobile), 600px (desktop)
 Vertical Align: Middle
+Padding: 64px top, 64px bottom (mobile: 48px)
 
 Inner Blocks:
   - Advanced Heading (H1):
       Text: "Fully Mobile Independent Equine Vets"
       Color: #FFFFFF
       Font Size: 36px (mobile), 60px (desktop)
+      Line Height: 1.2
       Margin Bottom: 16px
+      Max Width: 768px
+      Text Align: Left
   
   - Advanced Paragraph:
-      Text: [Hero description text]
+      Text: "Serving Norfolk & Suffolk with regular zone visits across the region. Expert, independent veterinary care for your horses, delivered directly to you."
       Color: #FFFFFF
       Opacity: 0.95
       Font Size: 16px (mobile), 20px (desktop)
+      Line Height: 1.75
       Max Width: 672px
       Margin Bottom: 32px
   
   - Kadence Row Layout (for buttons):
       Columns: 2 (mobile: 1)
       Gap: 16px
+      Max Width: fit-content
       
       Button 1:
         Text: "Register Your Horse"
         Link: /register
-        Background: Palette - Accent
-        Color: Palette - Primary
+        Background: Palette - Accent (#54BFED)
+        Color: Palette - Primary (#090B21)
         Padding: 12px 32px
         Border Radius: 6px
         Font Size: 16px
         Font Weight: 500
+        Hover: Opacity 0.9
       
       Button 2:
         Text: "Call 24/7 Support"
-        Icon: Phone
+        Icon: Phone (lucide-react)
         Link: tel:01603123456
         Style: Outline
-        Border Color: #FFFFFF
+        Border: 2px solid #FFFFFF
+        Background: Transparent
         Text Color: #FFFFFF
         Padding: 12px 32px
+        Border Radius: 6px
+        Font Size: 16px
+        Font Weight: 500
+        Hover: Background rgba(255,255,255,0.1)
 ```
 
 #### Section 2: About Preview
 ```
 Block: Kadence Row Layout
-Background: Palette - Background
+Background: Palette - Background (#FFFFFF)
 Padding: 64px top, 64px bottom (mobile: 48px)
-Container: Contained
+Container: Contained (1280px)
 
 Inner Content:
   - Advanced Heading (H2):
       Text: "Fully Mobile Independent Equine Vets"
       Align: Center
+      Color: Palette - Foreground
       Max Width: 768px
       Margin: 0 auto 16px auto
+      Font Size: 30px (mobile), 48px (desktop)
   
   - Advanced Paragraph:
-      Text: [About description]
+      Text: "We are a fully mobile, independent equine-only practice operating across Norfolk and Suffolk. Our team of experienced veterinarians provides comprehensive care for your horses with regular zone visits throughout the region."
       Align: Center
-      Color: Palette - Muted Text
+      Color: Palette - Muted Text (#667080)
+      Font Size: 16px (mobile), 18px (desktop)
+      Line Height: 1.75
       Max Width: 768px
       Margin: 0 auto 48px auto
   
   - Emergency Contact Card:
-      Block: Kadence Row Layout
-      Background: Palette - Secondary
+      Block: Kadence Advanced Card
+      Background: Palette - Secondary (#F0F4F6)
+      Border: 1px solid Palette - Border
       Border Radius: 24px
-      Padding: 24px
+      Padding: 24px (mobile: 20px)
       Max Width: 672px
       Margin: 0 auto
+      Box Shadow: 0 1px 3px rgba(0,0,0,0.1)
       
-      Content: Phone icon + Emergency number
+      Content Layout (Flex row, center aligned):
+        - Icon (Phone):
+            Size: 24px
+            Color: Palette - Accent
+            Margin Right: 12px
+        
+        - Text Block:
+            Display: Flex column
+            
+            Label:
+              Text: "24/7 Emergency Line"
+              Font Size: 14px
+              Color: Palette - Muted Text
+              Margin Bottom: 4px
+            
+            Phone Link:
+              Text: "01603 123 456"
+              Font Size: 20px (mobile: 18px)
+              Font Weight: 700
+              Color: Palette - Foreground
+              Link: tel:01603123456
 ```
 
 #### Section 3: Team Preview
 ```
 Block: Kadence Row Layout
-Background: Palette - Muted
-Padding: 64px top, 64px bottom
+Background: Palette - Muted (#F4F7F8)
+Padding: 64px top, 64px bottom (mobile: 48px)
 
 Inner Blocks:
-  - Section Header (same pattern as above)
+  - Advanced Heading (H2):
+      Text: "Meet Our Expert Team"
+      Align: Center
+      Margin Bottom: 16px
+      Font Size: 30px (mobile), 48px (desktop)
   
-  - Kadence Row Layout:
+  - Advanced Paragraph:
+      Text: "Experienced, independent veterinarians dedicated to your horse's health"
+      Align: Center
+      Color: Palette - Muted Text
+      Margin: 0 auto 48px auto
+      Max Width: 672px
+  
+  - Kadence Row Layout (Staff Grid):
       Columns: 3 (tablet: 2, mobile: 1)
       Column Gap: 24px
+      Row Gap: 24px
+      Max Width: 1152px
+      Margin: 0 auto
       
-      Staff Cards (repeat 3 times):
-        Block: Kadence Column
+      Staff Cards (repeat 3 times for preview):
+        Block: Kadence Advanced Card
         
-        Inner Blocks:
-          - Image Block (aspect ratio 1:1)
-          - Advanced Heading (H3): Name
-          - Advanced Paragraph: Role (color: Accent)
-          - Advanced Paragraph: Bio
-        
-        Styling:
+        Card Structure:
           Background: #FFFFFF
-          Border: 1px solid Palette - Border
+          Border: 1px solid Palette - Border (#D9E3E8)
           Border Radius: 16px
           Padding: 0
-          Hover: Box Shadow
+          Overflow: Hidden
+          Transition: all 0.3s ease
+          Hover: Box Shadow (0 10px 30px rgba(0,0,0,0.1))
+          Hover: Transform translateY(-4px)
+        
+        Inner Blocks:
+          - Image Block:
+              Aspect Ratio: 1:1 (square)
+              Object Fit: Cover
+              Border Radius: 16px 16px 0 0
+          
+          - Content Wrapper (padding: 24px):
+              
+              - Advanced Heading (H3):
+                  Text: [Staff Name]
+                  Font Size: 20px
+                  Font Weight: 600
+                  Margin Bottom: 8px
+                  Color: Palette - Foreground
+              
+              - Advanced Paragraph (Role):
+                  Text: [Role]
+                  Font Size: 14px
+                  Font Weight: 500
+                  Color: Palette - Accent (#54BFED)
+                  Margin Bottom: 12px
+              
+              - Advanced Paragraph (Bio):
+                  Text: [Short bio]
+                  Font Size: 14px
+                  Line Height: 1.75
+                  Color: Palette - Muted Text
   
-  - Button:
+  - Advanced Button:
       Text: "Meet the Full Team"
       Link: /about
       Style: Outline
+      Border: 1px solid Palette - Border
+      Background: Transparent
+      Color: Palette - Foreground
+      Padding: 10px 24px
+      Border Radius: 6px
       Align: Center
       Margin Top: 32px
+      Hover: Background Palette - Secondary
 ```
 
 #### Section 4: Services Preview
 ```
 Block: Kadence Row Layout
-Background: Palette - Background
-Padding: 64px top, 64px bottom
+Background: Palette - Background (#FFFFFF)
+Padding: 64px top, 64px bottom (mobile: 48px)
 
 Inner Blocks:
-  - Section Header
+  - Advanced Heading (H2):
+      Text: "Our Equine Services"
+      Align: Center
+      Margin Bottom: 16px
   
-  - Kadence Row Layout:
+  - Advanced Paragraph:
+      Text: "Comprehensive veterinary care for your horses"
+      Align: Center
+      Color: Palette - Muted Text
+      Margin: 0 auto 48px auto
+  
+  - Kadence Row Layout (Services Grid):
       Columns: 3 (tablet: 2, mobile: 1)
       Row Gap: 24px
       Column Gap: 24px
+      Max Width: 1280px
+      Margin: 0 auto
       
-      Service Cards (6 total, 2 rows):
-        Each card structure:
-          - Icon (Kadence Icon Block)
-              Background: Palette - Accent at 10% opacity
+      Service Cards (6 total in preview, 2 rows):
+        Block: Kadence Advanced Card
+        
+        Card Structure:
+          Background: #FFFFFF
+          Border: 1px solid Palette - Border (#D9E3E8)
+          Border Radius: 16px
+          Padding: 24px
+          Transition: all 0.3s ease
+          Hover: Box Shadow (0 8px 24px rgba(0,0,0,0.08))
+        
+        Inner Elements:
+          - Kadence Icon Block (Icon Wrapper):
+              Background: rgba(84, 191, 237, 0.1)
               Size: 48px
               Border Radius: 12px
               Padding: 12px
-              Icon Color: Palette - Accent
+              Icon Color: Palette - Accent (#54BFED)
+              Icon Size: 24px
               Margin Bottom: 16px
+              Transition: transform 0.2s ease
+              Hover: Scale 1.1
           
           - Advanced Heading (H3):
-              Service title
+              Text: [Service Name]
               Font Size: 18px
+              Font Weight: 600
               Margin Bottom: 12px
+              Color: Palette - Foreground
           
           - Advanced Paragraph:
-              Service description
+              Text: [Service Description]
               Font Size: 14px
-              Color: Palette - Muted Text
-        
-        Card Wrapper Styling:
-          Background: #FFFFFF
-          Border: 1px solid Palette - Border
-          Border Radius: 16px
-          Padding: 24px
-          Hover: Box Shadow
+              Line Height: 1.75
+              Color: Palette - Muted Text (#667080)
+  
+  - Advanced Button:
+      Text: "View All Services"
+      Link: /services
+      Background: Palette - Primary
+      Color: #FFFFFF
+      Padding: 12px 32px
+      Border Radius: 6px
+      Align: Center
+      Margin Top: 32px
 ```
 
 #### Section 5: Testimonials
 ```
 Block: Kadence Row Layout
-Background: Palette - Muted
-Padding: 64px top, 64px bottom
+Background: Palette - Muted (#F4F7F8)
+Padding: 64px top, 64px bottom (mobile: 48px)
 
 Inner Blocks:
-  - Section Header
+  - Advanced Heading (H2):
+      Text: "What Our Clients Say"
+      Align: Center
+      Margin Bottom: 16px
   
-  - Kadence Row Layout:
+  - Advanced Paragraph:
+      Text: "Trusted by horse owners across Norfolk & Suffolk"
+      Align: Center
+      Color: Palette - Muted Text
+      Margin: 0 auto 48px auto
+  
+  - Kadence Row Layout (Testimonial Grid):
       Columns: 3 (tablet: 2, mobile: 1)
       Column Gap: 24px
+      Row Gap: 24px
+      Max Width: 1152px
+      Margin: 0 auto
       
       Testimonial Cards (3 total):
-        - Icon Block (Quote icon)
-            Size: 40px
-            Color: Palette - Accent at 30% opacity
-            Margin Bottom: 16px
+        Block: Kadence Advanced Card
         
-        - Advanced Paragraph (Quote):
-            Font Style: Italic
-            Color: Palette - Muted Text
-            Margin Bottom: 24px
-        
-        - Divider (1px, Palette - Border)
-        
-        - Advanced Paragraph (Name):
-            Font Weight: 600
-            Margin Bottom: 4px
-        
-        - Advanced Paragraph (Location):
-            Font Size: 14px
-            Color: Palette - Muted Text
-        
-        Card Styling:
+        Card Structure:
           Background: #FFFFFF
           Border: 1px solid Palette - Border
           Border Radius: 16px
-          Padding: 32px
-          Box Shadow on Hover
+          Padding: 32px (mobile: 24px)
+          Transition: box-shadow 0.3s ease
+          Hover: Box Shadow (0 10px 30px rgba(0,0,0,0.1))
+        
+        Inner Elements:
+          - Icon Block (Quote Icon):
+              Icon: Quote (lucide-react)
+              Size: 40px
+              Color: Palette - Accent
+              Opacity: 0.3
+              Margin Bottom: 16px
+          
+          - Advanced Paragraph (Quote):
+              Text: [Testimonial Quote]
+              Font Style: Italic
+              Font Size: 14px
+              Line Height: 1.75
+              Color: Palette - Muted Text
+              Margin Bottom: 24px
+          
+          - Kadence Divider:
+              Height: 1px
+              Color: Palette - Border
+              Margin Bottom: 16px
+          
+          - Advanced Paragraph (Name):
+              Text: [Client Name]
+              Font Size: 14px
+              Font Weight: 600
+              Color: Palette - Foreground
+              Margin Bottom: 4px
+          
+          - Advanced Paragraph (Location):
+              Text: [Location]
+              Font Size: 14px
+              Color: Palette - Muted Text
 ```
 
 #### Section 6: Zone Visit CTA
 ```
 Block: Kadence Row Layout
-Background: Palette - Muted
-Padding: 64px top, 64px bottom
+Background: Palette - Muted (#F4F7F8)
+Padding: 64px top, 64px bottom (mobile: 48px)
 
 Inner Blocks:
-  - Kadence Row Layout (Inner card):
+  - Kadence Advanced Card (Main CTA Card):
       Background: #FFFFFF
       Border: 1px solid Palette - Border
       Border Radius: 24px
       Padding: 48px (mobile: 32px)
       Max Width: 896px
       Margin: 0 auto
-      Box Shadow: Large
+      Box Shadow: 0 10px 40px rgba(0,0,0,0.08)
       
-      Content:
-        - Icon (Map Pin):
+      Content (Centered):
+        - Icon Wrapper:
+            Background: rgba(84, 191, 237, 0.1)
             Size: 64px
-            Background: Palette - Accent at 10% opacity
             Border Radius: 50%
             Padding: 16px
             Margin: 0 auto 16px auto
+            
+            Icon (Map Pin):
+              Size: 32px
+              Color: Palette - Accent
         
         - Advanced Heading (H2):
             Text: "Are We In Your Area?"
             Align: Center
+            Font Size: 30px (mobile: 24px)
             Margin Bottom: 16px
         
         - Advanced Paragraph:
-            Description text
+            Text: "We operate zone visits across Norfolk & Suffolk. Check our schedule to see when we'll be in your area for routine appointments."
             Align: Center
+            Font Size: 16px
+            Line Height: 1.75
+            Color: Palette - Muted Text
             Max Width: 600px
             Margin: 0 auto 32px auto
         
-        - Button:
+        - Advanced Button:
             Text: "View Zone Map & Schedule"
             Icon: Map Pin
+            Icon Position: Left
             Link: /zone-visit
-            Background: Palette - Primary
+            Background: Palette - Primary (#090B21)
             Color: #FFFFFF
-            Size: Large
+            Padding: 12px 32px
+            Border Radius: 6px
+            Font Size: 16px
+            Font Weight: 500
             Align: Center
+            Margin Bottom: 16px
         
-        - Contact Info:
-            Text: "Call us: 01603 123 456"
-            Link: tel:01603123456
-            Color: Palette - Accent
-            Font Weight: 600
+        - Advanced Paragraph (Contact Info):
             Align: Center
-            Margin Top: 16px
+            
+            Text/Link:
+              Text: "Call us: "
+              Link Text: "01603 123 456"
+              Link: tel:01603123456
+              Color: Palette - Accent
+              Font Weight: 600
+              Font Size: 14px
 ```
 
 #### Section 7: Final CTA
 ```
 Block: Kadence Row Layout
-Background: Palette - Primary
-Padding: 64px top, 64px bottom
+Background: Palette - Primary (#090B21)
+Padding: 64px top, 64px bottom (mobile: 48px)
 Text Align: Center
 
 Inner Blocks:
   - Advanced Heading (H2):
       Text: "Join Our Independent Equine Practice"
       Color: #FFFFFF
+      Font Size: 30px (mobile), 48px (desktop)
       Margin Bottom: 16px
+      Max Width: 768px
+      Margin: 0 auto 16px auto
   
   - Advanced Paragraph:
-      Description text
+      Text: "Register your horse with Vet3 Equine Care today for expert, independent veterinary services delivered directly to you."
       Color: #FFFFFF
       Opacity: 0.95
+      Font Size: 16px (mobile), 18px (desktop)
+      Line Height: 1.75
       Max Width: 672px
       Margin: 0 auto 32px auto
   
-  - Button:
+  - Advanced Button:
       Text: "Register Now"
       Link: /register
-      Background: Palette - Secondary
-      Color: Palette - Foreground
-      Size: Large
+      Background: Palette - Accent (#54BFED)
+      Color: Palette - Primary (#090B21)
+      Padding: 12px 32px
+      Border Radius: 6px
+      Font Size: 16px
+      Font Weight: 500
+      Hover: Opacity 0.9
 ```
 
 ---
@@ -770,21 +1019,24 @@ Template: Fullwidth Blank
 #### Section 1: Hero (Text Only)
 ```
 Block: Kadence Row Layout
-Background: Palette - Muted
-Padding: 64px top, 64px bottom
-Container: Contained
+Background: Palette - Muted (#F4F7F8)
+Padding: 64px top, 64px bottom (mobile: 48px)
+Container: Contained (1280px)
 
 Inner Blocks:
   - Advanced Heading (H1):
       Text: "Meet Our Fully Mobile Independent Equine Veterinary Team"
       Align: Center
+      Color: Palette - Foreground
       Max Width: 768px
       Margin: 0 auto 24px auto
+      Font Size: 36px (mobile), 60px (desktop)
   
   - Advanced Paragraph:
-      Description text
+      Text: "A dedicated team of experienced equine veterinarians providing comprehensive care across Norfolk & Suffolk"
       Align: Center
-      Font Size: 18px
+      Font Size: 18px (mobile: 16px)
+      Line Height: 1.75
       Color: Palette - Muted Text
       Max Width: 768px
       Margin: 0 auto
@@ -793,8 +1045,8 @@ Inner Blocks:
 #### Section 2: All Staff Grid
 ```
 Block: Kadence Row Layout
-Background: Palette - Background
-Padding: 64px top, 64px bottom
+Background: Palette - Background (#FFFFFF)
+Padding: 64px top, 64px bottom (mobile: 48px)
 
 Inner Blocks:
   - Kadence Row Layout:
@@ -806,19 +1058,36 @@ Inner Blocks:
       
       Staff Cards (7 total):
         Same structure as Home page staff cards
-        [Repeat for each team member]
+        All team members displayed
 ```
 
 #### Section 3: Instagram Feed
 ```
 Block: Kadence Row Layout
-Background: Palette - Muted
-Padding: 64px top, 64px bottom
+Background: Palette - Muted (#F4F7F8)
+Padding: 64px top, 64px bottom (mobile: 48px)
 
 Inner Blocks:
-  - Section Header with Instagram icon
+  - Advanced Heading (H2):
+      Text: "Follow Us On Instagram"
+      Align: Center
+      Margin Bottom: 16px
+      
+      Icon (Instagram):
+        Display: Inline
+        Size: 32px
+        Color: Palette - Accent
+        Vertical Align: Middle
   
-  - Kadence Row Layout:
+  - Advanced Paragraph:
+      Text: "@vet3equine"
+      Align: Center
+      Font Size: 18px
+      Color: Palette - Accent
+      Font Weight: 500
+      Margin Bottom: 48px
+  
+  - Kadence Row Layout (Instagram Grid):
       Columns: 4 (tablet: 2, mobile: 2)
       Column Gap: 16px
       Row Gap: 16px
@@ -826,18 +1095,26 @@ Inner Blocks:
       Margin: 0 auto
       
       Instagram Post Placeholders (8 total):
-        Block: Image Block or Custom HTML
-        Aspect Ratio: 1:1
+        Block: Kadence Advanced Card or Image Block
+        Aspect Ratio: 1:1 (square)
         Border Radius: 12px
-        Background: Gradient (Primary to Secondary)
+        Background: Linear Gradient (Palette - Primary to Palette - Accent)
+        Overlay: Instagram icon centered
         Link: https://instagram.com/vet3equine
+        Target: _blank
+        Transition: opacity 0.3s ease
+        Hover: Opacity 0.9
         
-        Inner Content: Instagram icon placeholder
+        Inner Content:
+          - Icon (Instagram):
+              Size: 48px
+              Color: rgba(255,255,255,0.8)
+              Position: Absolute center
 ```
 
 #### Section 4: CTA
 ```
-Same as Home page final CTA
+Same as Home page final CTA section
 ```
 
 ---
@@ -855,51 +1132,83 @@ Template: Fullwidth Blank
 
 #### Section 1: Hero
 ```
-Similar to About page hero
-Title: "Fully Mobile Independent Equine Vets - Norfolk & Suffolk"
-Description: Service overview text
+Block: Kadence Row Layout
+Background: Palette - Muted
+Padding: 64px top, 64px bottom (mobile: 48px)
+
+Inner Blocks:
+  - Advanced Heading (H1):
+      Text: "Fully Mobile Independent Equine Vets - Norfolk & Suffolk"
+      Align: Center
+      Max Width: 768px
+      Margin: 0 auto 24px auto
+  
+  - Advanced Paragraph:
+      Text: "Comprehensive equine veterinary services delivered directly to you through our regular zone visits"
+      Align: Center
+      Font Size: 18px (mobile: 16px)
+      Color: Palette - Muted Text
+      Max Width: 672px
+      Margin: 0 auto
 ```
 
 #### Section 2: Services (Mobile - Accordion)
 ```
 Block: Kadence Accordion Block
-Show on: Mobile and Tablet only (use Kadence visibility controls)
+Visibility: Mobile and Tablet only (< 1024px)
+Background: Palette - Background
+Padding: 48px 16px
 Max Width: 896px
 Margin: 0 auto
 
 Accordion Items (16 services):
-  Each Item:
-    Title: Service name with icon
-    Content: Service description
+  Each Item Structure:
+    Background: #FFFFFF
+    Border: 1px solid Palette - Border
+    Border Radius: 16px
+    Margin Bottom: 16px
+    Padding: 0
+    Overflow: Hidden
     
-    Styling:
-      Background: #FFFFFF
-      Border: 1px solid Palette - Border
-      Border Radius: 16px
-      Margin Bottom: 16px
+    Title Panel:
       Padding: 24px
+      Display: Flex
+      Align Items: Center
+      Gap: 16px
+      Font Size: 16px
+      Font Weight: 600
+      Color: Palette - Foreground
+      Cursor: Pointer
+      Transition: background 0.2s ease
       
-      Title:
-        Font Size: 16px
-        Font Weight: 600
-        Display: Flex with icon
+      Icon:
+        Size: 24px
+        Color: Palette - Accent
+        Flex Shrink: 0
       
-      Content:
-        Font Size: 14px
-        Color: Palette - Muted Text
-        Padding Left: 56px (to align with icon)
+      Hover State:
+        Background: rgba(244, 247, 248, 0.5)
+    
+    Content Panel:
+      Padding: 0 24px 24px 64px (to align with icon)
+      Font Size: 14px
+      Line Height: 1.75
+      Color: Palette - Muted Text
+      
+    Open State:
+      Title Background: Palette - Secondary
 ```
 
 #### Section 3: Services (Desktop - Grid)
 ```
 Block: Kadence Row Layout
-Show on: Desktop only
+Visibility: Desktop only (>= 1024px)
 Background: Palette - Background
 Padding: 64px top, 64px bottom
 
 Inner Blocks:
   - Kadence Row Layout:
-      Columns: 3 (large screens), 2 (medium screens)
+      Columns: 3 (large: 3, medium: 2)
       Column Gap: 24px
       Row Gap: 24px
       Max Width: 1280px
@@ -907,75 +1216,122 @@ Inner Blocks:
       
       Service Cards (16 total):
         Same structure as Home page service cards
-        [One for each service from the list]
+        
+        Services List:
+        1. Routine Health Checks
+        2. Vaccinations
+        3. Dentistry
+        4. Lameness Investigations
+        5. Emergency Care
+        6. Pre-Purchase Examinations
+        7. Medical & Surgical Care
+        8. Diagnostic Imaging
+        9. Reproduction Services
+        10. Wound Management
+        11. Colic Management
+        12. Respiratory Conditions
+        13. Castrations
+        14. Microchipping
+        15. Blood Testing
+        16. Geriatric Care
 ```
 
 #### Section 4: Emergency Banner
 ```
 Block: Kadence Row Layout
-Background: Palette - Accent at 10% opacity
-Padding: 48px top, 48px bottom
+Background: rgba(84, 191, 237, 0.1) (Accent at 10% opacity)
+Border: 1px solid rgba(84, 191, 237, 0.2)
+Padding: 48px (mobile: 32px)
 
 Inner Content:
-  - Kadence Row Layout (inner):
+  - Kadence Advanced Card (Inner Card):
       Columns: 1
       Max Width: 896px
       Margin: 0 auto
-      Align: Center
+      Text Align: Center
+      Background: Transparent
       
       Content:
         - Advanced Heading (H3):
             Text: "Need Immediate Assistance?"
+            Font Size: 24px (mobile: 20px)
+            Color: Palette - Foreground
             Margin Bottom: 8px
         
         - Advanced Paragraph:
-            Text: "Our emergency line is available 24/7..."
-            Margin Bottom: 24px
+            Text: "Our emergency line is available 24/7 for urgent equine veterinary care. Don't hesitate to call if your horse needs immediate attention."
+            Font Size: 16px
+            Line Height: 1.75
+            Color: Palette - Muted Text
+            Max Width: 600px
+            Margin: 0 auto 24px auto
         
-        - Button:
+        - Advanced Button:
             Text: "Call Now: 01603 123 456"
             Icon: Phone
+            Icon Position: Left
             Link: tel:01603123456
             Background: Palette - Primary
-            Size: Large
+            Color: #FFFFFF
+            Padding: 12px 32px
+            Border Radius: 6px
+            Font Size: 16px
+            Font Weight: 500
 ```
 
 #### Section 5: CTA
 ```
 Block: Kadence Row Layout
-Background: Palette - Primary
-Padding: 64px top, 64px bottom
+Background: Palette - Primary (#090B21)
+Padding: 64px top, 64px bottom (mobile: 48px)
 
 Inner Content:
   - Advanced Heading (H2):
       Text: "Register with Independent Equine Vets"
       Color: #FFFFFF
       Align: Center
+      Font Size: 30px (mobile), 48px (desktop)
+      Margin Bottom: 16px
   
   - Advanced Paragraph:
-      Description
+      Text: "Join our practice and benefit from expert equine care delivered directly to you through our regular zone visits"
       Color: #FFFFFF
       Opacity: 0.95
       Align: Center
+      Font Size: 16px (mobile), 18px (desktop)
+      Line Height: 1.75
       Max Width: 672px
       Margin: 0 auto 32px auto
   
-  - Kadence Row Layout (buttons):
+  - Kadence Row Layout (Button Group):
       Columns: 2 (mobile: 1)
       Gap: 16px
       Max Width: 500px
       Margin: 0 auto
+      Justify Content: Center
       
       Button 1:
         Text: "Register Your Horse"
-        Background: Palette - Secondary
-        Color: Palette - Foreground
+        Background: Palette - Accent (#54BFED)
+        Color: Palette - Primary
+        Padding: 12px 32px
+        Border Radius: 6px
+        Font Size: 16px
+        Font Weight: 500
+        Link: /register
       
       Button 2:
         Text: "Check Your Zone"
         Style: Outline
-        Border Color: #FFFFFF
+        Border: 2px solid #FFFFFF
+        Background: Transparent
         Color: #FFFFFF
+        Padding: 12px 32px
+        Border Radius: 6px
+        Font Size: 16px
+        Font Weight: 500
+        Link: /zone-visit
+        Hover: Background rgba(255,255,255,0.1)
 ```
 
 ---
@@ -994,17 +1350,21 @@ Template: Fullwidth Blank
 #### Section 1: Header
 ```
 Block: Kadence Row Layout
-Background: Palette - Background
-Padding: 64px top, 48px bottom
+Background: Palette - Background (#FFFFFF)
+Padding: 64px top, 48px bottom (mobile: 48px top, 32px bottom)
 
 Inner Content:
   - Advanced Heading (H1):
       Text: "Register Your Horse"
       Align: Center
+      Font Size: 36px (mobile), 60px (desktop)
+      Margin Bottom: 16px
   
   - Advanced Paragraph:
-      Description
+      Text: "Join our equine practice and benefit from expert veterinary care delivered directly to you"
       Align: Center
+      Font Size: 16px (mobile), 18px (desktop)
+      Line Height: 1.75
       Color: Palette - Muted Text
       Max Width: 768px
       Margin: 0 auto
@@ -1014,106 +1374,239 @@ Inner Content:
 ```
 Block: Kadence Row Layout
 Background: Palette - Background
-Padding: 0 (container padding only), 64px bottom
+Padding: 0 16px 64px 16px (mobile: 0 16px 48px 16px)
 Max Width: 768px
 Margin: 0 auto
 
 Inner Blocks:
   - Kadence Advanced Card:
       Background: #FFFFFF
-      Border: 1px solid Palette - Border
+      Border: 1px solid Palette - Border (#D9E3E8)
       Border Radius: 16px
-      Padding: 32px
-      Box Shadow: Medium
+      Padding: 32px (mobile: 24px)
+      Box Shadow: 0 4px 16px rgba(0,0,0,0.08)
       
       Card Header:
         - Advanced Heading (H2):
             Text: "Horse Registration Form"
-            Font Size: 24px
+            Font Size: 24px (mobile: 20px)
+            Font Weight: 600
+            Color: Palette - Foreground
             Margin Bottom: 8px
         
         - Advanced Paragraph:
-            Text: Form description
+            Text: "Please complete all required fields marked with *"
             Font Size: 14px
             Color: Palette - Muted Text
             Padding Bottom: 24px
             Border Bottom: 1px solid Palette - Border
+            Margin Bottom: 32px
       
-      Card Content:
-        - Contact Form 7 or WPForms shortcode
+      Card Content (Form using Kadence Form Block or Contact Form 7):
         
-        OR build with Kadence Form Block:
+        **FORM STYLING (Apply to all fields):**
         
-        Form Fields (organized in sections):
+        Label Styling:
+          Font Size: 14px
+          Font Weight: 500
+          Color: Palette - Foreground
+          Margin Bottom: 8px
+          Display: Block
         
-        **Section 1: Owner Information**
-        - Text Input: First Name * (50% width)
-        - Text Input: Last Name * (50% width)
-        - Email Input: Email Address *
-        - Tel Input: Phone Number * (50% width)
-        - Tel Input: Alternative Phone (50% width)
-        - Textarea: Address *
-        - Text Input: Town/City * (50% width)
-        - Text Input: Postcode * (50% width)
+        Input Styling:
+          Border: 1px solid Palette - Border (#D9E3E8)
+          Border Radius: 6px
+          Padding: 8px 12px
+          Font Size: 14px
+          Line Height: 1.5
+          Color: Palette - Foreground
+          Background: #FFFFFF
+          Transition: all 0.2s ease
+          
+          Focus State:
+            Border Color: Palette - Accent (#54BFED)
+            Outline: none
+            Box Shadow: 0 0 0 3px rgba(84, 191, 237, 0.2)
+          
+          Error State:
+            Border Color: #DC2626
+            Box Shadow: 0 0 0 3px rgba(220, 38, 38, 0.1)
         
-        Divider (1px, Palette - Border)
+        Checkbox Styling:
+          Width: 16px
+          Height: 16px
+          Border: 2px solid Palette - Primary
+          Border Radius: 4px
+          
+        **FORM SECTIONS:**
         
-        **Section 2: Horse Information**
-        - Text Input: Horse Name * (50% width)
-        - Text Input: Breed (50% width)
-        - Number Input: Age * (33% width)
-        - Text Input: Sex * (33% width)
-        - Text Input: Color (33% width)
-        - Text Input: Microchip Number
+        Section 1: Owner Information
+        ---
+        Heading:
+          Text: "Owner Information"
+          Font Size: 18px
+          Font Weight: 600
+          Margin Bottom: 24px
+          Color: Palette - Foreground
         
-        Divider
+        Fields (in Kadence Row Layout for side-by-side):
+          Row 1 (2 columns):
+            - Text Input: First Name *
+              Width: 50%
+            - Text Input: Last Name *
+              Width: 50%
+          
+          Row 2:
+            - Email Input: Email Address *
+              Width: 100%
+          
+          Row 3 (2 columns):
+            - Tel Input: Phone Number *
+              Width: 50%
+            - Tel Input: Alternative Phone
+              Width: 50%
+          
+          Row 4:
+            - Textarea: Address *
+              Width: 100%
+              Rows: 3
+          
+          Row 5 (2 columns):
+            - Text Input: Town/City *
+              Width: 50%
+            - Text Input: Postcode *
+              Width: 50%
+        ---
         
-        **Section 3: Horse Address**
-        - Textarea: Address *
-        - Text Input: Town/City * (50% width)
-        - Text Input: Postcode * (50% width)
+        Divider:
+          Height: 1px
+          Color: Palette - Border
+          Margin: 32px 0
         
-        Divider
+        Section 2: Horse Information
+        ---
+        Heading:
+          Text: "Horse Information"
+          Font Size: 18px
+          Font Weight: 600
+          Margin Bottom: 24px
         
-        **Section 4: Previous Vet**
-        - Text Input: Previous Vet Name (50% width)
-        - Tel Input: Previous Vet Contact (50% width)
+        Fields:
+          Row 1 (2 columns):
+            - Text Input: Horse Name *
+              Width: 50%
+            - Text Input: Breed
+              Width: 50%
+          
+          Row 2 (3 columns):
+            - Number Input: Age *
+              Width: 33.33%
+              Min: 0
+              Max: 50
+            - Select Input: Sex *
+              Width: 33.33%
+              Options: Mare, Gelding, Stallion
+            - Text Input: Color
+              Width: 33.33%
+          
+          Row 3:
+            - Text Input: Microchip Number
+              Width: 100%
+        ---
         
-        Divider
+        Divider (same styling)
         
-        **Section 5: Consent**
-        - Checkbox: Permission for clinical history
-        - Checkbox: Terms & Conditions agreement *
-        - Advanced Paragraph: Links to Terms and Privacy
+        Section 3: Horse Address
+        ---
+        Heading:
+          Text: "Horse Address"
+          Font Size: 18px
+          Font Weight: 600
+          Margin Bottom: 24px
         
-        **Submit Button**
-        - Text: "Complete Registration"
-        - Style: Primary
-        - Background: Palette - Primary
-        - Width: Full
-        - Size: Large
-        - Margin Top: 24px
-
-Form Styling:
-  Label Font Size: 14px
-  Label Font Weight: 500
-  Label Margin Bottom: 8px
-  
-  Input Border: 1px solid Palette - Border
-  Input Border Radius: 6px
-  Input Padding: 8px 12px
-  Input Font Size: 14px
-  Input Focus Border: Palette - Accent
-  Input Focus Shadow: 0 0 0 2px rgba(107, 197, 232, 0.2)
-  
-  Checkbox Size: 16px
-  Checkbox Border: 1px solid Palette - Primary
-  
-  Section Headers:
-    Font Size: 18px
-    Font Weight: 600
-    Margin Bottom: 24px
-    Margin Top: 32px (except first)
+        Fields:
+          - Textarea: Address *
+            Width: 100%
+            Rows: 3
+          
+          Row (2 columns):
+            - Text Input: Town/City *
+              Width: 50%
+            - Text Input: Postcode *
+              Width: 50%
+        ---
+        
+        Divider (same styling)
+        
+        Section 4: Previous Vet
+        ---
+        Heading:
+          Text: "Previous Vet (Optional)"
+          Font Size: 18px
+          Font Weight: 600
+          Margin Bottom: 24px
+        
+        Fields (2 columns):
+          - Text Input: Previous Vet Name
+            Width: 50%
+          - Tel Input: Previous Vet Contact
+            Width: 50%
+        ---
+        
+        Divider (same styling)
+        
+        Section 5: Consent
+        ---
+        Heading:
+          Text: "Consent & Agreement"
+          Font Size: 18px
+          Font Weight: 600
+          Margin Bottom: 24px
+        
+        Fields:
+          - Checkbox Group:
+              - Permission for clinical history checkbox
+                Label: "I give permission for Vet3 Equine Care to request clinical history from my previous vet"
+                Font Size: 14px
+                Line Height: 1.75
+                Margin Bottom: 12px
+              
+              - Terms checkbox *
+                Label: "I agree to the Terms & Conditions and Privacy Policy"
+                Font Size: 14px
+                Line Height: 1.75
+                Required: Yes
+          
+          - Advanced Paragraph:
+              Font Size: 12px
+              Color: Palette - Muted Text
+              Margin Top: 8px
+              
+              Links:
+                - Terms & Conditions (link to /terms)
+                - Privacy Policy (link to /privacy)
+                Link Color: Palette - Accent
+                Link Hover: Underline
+        ---
+        
+        Submit Button:
+          Text: "Complete Registration"
+          Background: Palette - Primary (#090B21)
+          Color: #FFFFFF
+          Width: 100%
+          Padding: 12px
+          Border Radius: 6px
+          Font Size: 16px
+          Font Weight: 500
+          Margin Top: 24px
+          Cursor: Pointer
+          Transition: opacity 0.2s ease
+          Hover: Opacity 0.9
+          
+          Loading State:
+            Text: "Submitting..."
+            Opacity: 0.7
+            Cursor: not-allowed
 ```
 
 ---
@@ -1140,17 +1633,19 @@ Description: "Have a question or need assistance? We're here to help."
 ```
 Block: Kadence Row Layout
 Background: Palette - Background
-Padding: 0 (container padding only), 64px bottom
+Padding: 0 16px 64px 16px (mobile: 0 16px 48px 16px)
 
 Inner Blocks:
   - Kadence Row Layout:
-      Columns: 2 (1 narrow, 1 wide = 33% / 67%)
-      Mobile: Stack to 1 column
+      Columns: 2 (Desktop: 33% / 67%, Mobile: 1 column)
       Column Gap: 32px
+      Row Gap: 32px (mobile)
       Max Width: 1024px
       Margin: 0 auto
       
       **Left Column: Contact Info Cards**
+      
+      Stack of Contact Cards (5 cards):
       
       Card 1 - Phone:
         Block: Kadence Advanced Card
@@ -1160,27 +1655,66 @@ Inner Blocks:
         Padding: 24px
         Margin Bottom: 24px
         
-        Content:
-          - Icon (Phone) in circle background
-          - Heading: "Phone"
-          - Text: "24/7 Emergency Line"
-          - Link: 01603 123 456
+        Structure:
+          - Icon Wrapper:
+              Background: rgba(84, 191, 237, 0.1)
+              Size: 48px
+              Border Radius: 50%
+              Padding: 12px
+              Margin Bottom: 12px
+              
+              Icon (Phone):
+                Size: 24px
+                Color: Palette - Accent
+          
+          - Heading:
+              Text: "Phone"
+              Font Size: 14px
+              Font Weight: 600
+              Color: Palette - Foreground
+              Margin Bottom: 4px
+          
+          - Label:
+              Text: "24/7 Emergency Line"
+              Font Size: 12px
+              Color: Palette - Muted Text
+              Margin Bottom: 8px
+          
+          - Link:
+              Text: "01603 123 456"
+              Font Size: 16px
+              Font Weight: 600
+              Color: Palette - Accent
+              Link: tel:01603123456
+              Hover: Underline
       
       Card 2 - WhatsApp:
-        Same structure
-        Content: WhatsApp info with hours
+        Same structure as Phone card
+        Icon: MessageCircle (lucide-react)
+        Heading: "WhatsApp"
+        Label: "8:30am - 5:30pm weekdays"
+        Link: WhatsApp link
       
       Card 3 - Email:
         Same structure
-        Content: Email address
+        Icon: Mail
+        Heading: "Email"
+        Label: "We respond within 24 hours"
+        Link: info@vet3equine.co.uk (mailto:)
       
       Card 4 - Location:
         Same structure
-        Content: "Serving Norfolk & Suffolk"
+        Icon: MapPin
+        Heading: "Location"
+        Text: "Serving Norfolk & Suffolk"
+        No link
       
       Card 5 - Hours:
         Same structure
-        Content: Opening hours
+        Icon: Clock
+        Heading: "Hours"
+        Text: "Zone visits by appointment\n24/7 Emergency available"
+        No link
       
       **Right Column: Contact Form**
       
@@ -1188,31 +1722,56 @@ Inner Blocks:
       Background: #FFFFFF
       Border: 1px solid Palette - Border
       Border Radius: 12px
-      Padding: 32px
-      Height: 100%
+      Padding: 32px (mobile: 24px)
+      Height: 100% (match left column)
       
       Content:
         - Advanced Heading (H2):
             Text: "Send Us a Message"
+            Font Size: 24px (mobile: 20px)
+            Margin Bottom: 8px
+        
+        - Advanced Paragraph:
+            Text: "Fill out the form below and we'll get back to you as soon as possible"
+            Font Size: 14px
+            Color: Palette - Muted Text
             Margin Bottom: 24px
         
         - Contact Form (using form plugin):
+            Apply same form styling as Register page
+            
             Fields:
-            - Text: First Name * (50% width)
-            - Text: Last Name * (50% width)
-            - Email: Email Address *
-            - Tel: Phone Number
-            - Text: Subject *
-            - Textarea: Message * (rows: 6)
+              Row 1 (2 columns):
+                - Text: First Name *
+                  Width: 50%
+                - Text: Last Name *
+                  Width: 50%
+              
+              - Email: Email Address *
+                Width: 100%
+              
+              - Tel: Phone Number
+                Width: 100%
+              
+              - Text: Subject *
+                Width: 100%
+              
+              - Textarea: Message *
+                Width: 100%
+                Rows: 6
             
             Submit Button:
               Text: "Send Message"
-              Style: Primary
-              Width: Full
-              Size: Large
+              Background: Palette - Primary
+              Color: #FFFFFF
+              Width: 100%
+              Padding: 12px
+              Border Radius: 6px
+              Font Size: 16px
+              Font Weight: 500
         
         - Advanced Paragraph (below form):
-            Text: "We aim to respond within 24 hours..."
+            Text: "We aim to respond within 24 hours during business days"
             Font Size: 14px
             Color: Palette - Muted Text
             Align: Center
@@ -1234,96 +1793,145 @@ Template: Fullwidth Blank
 
 #### Section 1: Header
 ```
-Same structure as other pages
-Title: "Zone Visit Schedule"
-Description: Zone visit explanation
+Block: Kadence Row Layout
+Background: Palette - Muted
+Padding: 64px top, 64px bottom (mobile: 48px)
+
+Inner Blocks:
+  - Advanced Heading (H1):
+      Text: "Zone Visit Schedule"
+      Align: Center
+      Margin Bottom: 16px
+  
+  - Advanced Paragraph:
+      Text: "Regular veterinary visits to specific areas across Norfolk & Suffolk"
+      Align: Center
+      Font Size: 18px (mobile: 16px)
+      Color: Palette - Muted Text
+      Max Width: 768px
+      Margin: 0 auto
 ```
 
 #### Section 2: Map Placeholder
 ```
 Block: Kadence Row Layout
-Padding: 0 (container padding), 32px bottom
+Background: Palette - Background
+Padding: 0 16px 32px 16px
 
 Inner Block:
-  - Kadence Advanced Card:
-      Background: Palette - Muted
+  - Kadence Advanced Card (Map Placeholder):
+      Background: Palette - Muted (#F4F7F8)
       Aspect Ratio: 16:9
+      Border: 1px solid Palette - Border
       Border Radius: 12px
       Display: Flex
-      Align: Center
-      Justify: Center
+      Flex Direction: Column
+      Align Items: Center
+      Justify Content: Center
       Max Width: 1024px
       Margin: 0 auto
+      Padding: 48px (mobile: 32px)
       
-      Content:
+      Content (Centered):
         - Icon (Map Pin):
             Size: 64px
             Color: Palette - Muted Text
+            Margin Bottom: 16px
+        
         - Advanced Heading:
             Text: "Zone Visit Map"
             Font Size: 20px
-            Margin Top: 16px
+            Font Weight: 600
+            Color: Palette - Foreground
+            Margin Bottom: 8px
+        
         - Advanced Paragraph:
-            Text: "Interactive map showing coverage zones..."
+            Text: "Interactive map showing coverage zones and visit schedules coming soon"
             Font Size: 14px
             Color: Palette - Muted Text
+            Text Align: Center
 ```
 
 #### Section 3: Zone Cards
 ```
 Block: Kadence Row Layout
-Padding: 32px top, 32px bottom
+Background: Palette - Background
+Padding: 32px 16px
 
 Inner Content:
   - Advanced Heading (H2):
       Text: "Our Visit Zones"
       Align: Center
+      Font Size: 30px (mobile), 48px (desktop)
       Margin Bottom: 48px
   
-  - Kadence Row Layout:
+  - Kadence Row Layout (Zone Grid):
       Columns: 3 (tablet: 2, mobile: 1)
       Column Gap: 24px
       Row Gap: 24px
       Max Width: 1024px
       Margin: 0 auto
       
-      Zone Cards (6 total):
+      Zone Cards (6 total - Zone A through F):
         Block: Kadence Advanced Card
         
-        Card Header:
-          - Zone Name (e.g., "Zone A - North Norfolk")
-            Font Size: 18px
-            Font Weight: 600
-            Margin Bottom: 8px
-          
-          - Areas List (e.g., "Cromer, Sheringham...")
-            Font Size: 14px
-            Color: Palette - Muted Text
-        
-        Card Content:
-          - Icon + Visit Days
-            Display: Flex with Calendar icon
-            Font Size: 14px
-            Color: Palette - Accent
-            Font Weight: 500
-        
-        Card Styling:
+        Card Structure:
           Background: #FFFFFF
           Border: 1px solid Palette - Border
           Border Radius: 12px
           Padding: 24px
-          Box Shadow on Hover
+          Transition: all 0.3s ease
+          Hover: Box Shadow (0 8px 24px rgba(0,0,0,0.08))
+          Hover: Transform translateY(-2px)
+        
+        Content:
+          - Advanced Heading (Zone Name):
+              Text: "Zone A - North Norfolk" (example)
+              Font Size: 18px
+              Font Weight: 600
+              Color: Palette - Foreground
+              Margin Bottom: 8px
+          
+          - Advanced Paragraph (Areas):
+              Text: "Cromer, Sheringham, Holt, North Walsham"
+              Font Size: 14px
+              Line Height: 1.75
+              Color: Palette - Muted Text
+              Margin Bottom: 16px
+          
+          - Divider:
+              Height: 1px
+              Color: Palette - Border
+              Margin Bottom: 12px
+          
+          - Visit Days (Flex layout):
+              Display: Flex
+              Align Items: Center
+              Gap: 8px
+              
+              Icon (Calendar):
+                Size: 16px
+                Color: Palette - Accent
+                Flex Shrink: 0
+              
+              Text:
+                Text: "Mondays & Thursdays"
+                Font Size: 14px
+                Font Weight: 500
+                Color: Palette - Accent
 ```
 
 #### Section 4: Information & Form
 ```
 Block: Kadence Row Layout
-Padding: 32px top, 64px bottom
+Background: Palette - Background
+Padding: 32px 16px 64px 16px
 
 Inner Blocks:
   - Kadence Row Layout:
       Columns: 2 (mobile: 1)
       Column Gap: 32px
+      Row Gap: 32px (mobile)
       Max Width: 1024px
       Margin: 0 auto
       
@@ -1338,29 +1946,45 @@ Inner Blocks:
       Content:
         - Advanced Heading:
             Text: "About Zone Visits"
+            Font Size: 18px
+            Font Weight: 600
             Margin Bottom: 16px
         
         - Advanced Paragraph:
-            Explanation text
+            Text: "We operate zone visits to provide efficient and cost-effective veterinary care across Norfolk & Suffolk. By scheduling visits to specific areas on set days, we can:"
+            Font Size: 14px
+            Line Height: 1.75
+            Color: Palette - Muted Text
             Margin Bottom: 16px
         
         - Unordered List:
-            - Reduce travel time and costs
-            - Predictable appointment scheduling
-            - Serve more clients in each area
-            - Maintain competitive pricing
+            Items:
+              - Reduce travel time and costs
+              - Provide predictable appointment scheduling
+              - Serve more clients in each area
+              - Maintain competitive pricing
             
             List Styling:
               Margin Left: 24px
               Line Height: 2
+              Font Size: 14px
+              Color: Palette - Muted Text
+              
+              List Item Marker:
+                Color: Palette - Accent
         
-        - Advanced Paragraph:
-            Emergency services note
+        - Advanced Paragraph (Note):
+            Text: "Emergency services are available 24/7 regardless of zone schedule."
+            Font Size: 14px
             Font Weight: 600
+            Color: Palette - Foreground
             Margin Top: 16px
+            Margin Bottom: 8px
         
         - Advanced Paragraph:
-            "Not sure which zone..." note
+            Text: "Not sure which zone you're in? Use the enquiry form to find out."
+            Font Size: 14px
+            Color: Palette - Muted Text
       
       **Right Column: Enquiry Form**
       
@@ -1373,26 +1997,47 @@ Inner Blocks:
       Content:
         - Advanced Heading:
             Text: "Zone Enquiry"
+            Font Size: 18px
+            Font Weight: 600
             Margin Bottom: 8px
         
         - Advanced Paragraph:
-            Text: "Not sure about your zone?..."
+            Text: "Not sure about your zone or visit schedule? Send us your details and we'll get back to you."
             Font Size: 14px
             Color: Palette - Muted Text
             Margin Bottom: 24px
         
-        - Form Fields:
+        - Form Fields (apply same styling as other forms):
             - Text: Name *
+              Width: 100%
+            
             - Email: Email *
+              Width: 100%
+            
             - Tel: Phone Number *
+              Width: 100%
+            
             - Text: Postcode *
-            - Textarea: Full Address (rows: 2)
-            - Textarea: Additional Information (rows: 3)
+              Width: 100%
+            
+            - Textarea: Full Address
+              Width: 100%
+              Rows: 2
+            
+            - Textarea: Additional Information
+              Width: 100%
+              Rows: 3
+              Placeholder: "Any specific questions or concerns?"
             
             Submit Button:
               Text: "Send Enquiry"
-              Style: Primary
-              Width: Full
+              Background: Palette - Primary
+              Color: #FFFFFF
+              Width: 100%
+              Padding: 12px
+              Border Radius: 6px
+              Font Size: 16px
+              Font Weight: 500
 ```
 
 ---
@@ -1411,18 +2056,28 @@ Template: Fullwidth Blank
 #### Section 1: Header
 ```
 Block: Kadence Row Layout
-Padding: 64px top, 32px bottom
+Background: Palette - Background
+Padding: 64px 16px 32px 16px (mobile: 48px 16px 24px 16px)
+Container: Contained
 
 Inner Content:
   - Advanced Heading (H1):
       Text: "Terms & Conditions"
-      Margin Bottom: 32px
+      Align: Left
+      Font Size: 36px (mobile), 60px (desktop)
+      Margin Bottom: 16px
+  
+  - Advanced Paragraph:
+      Text: "Last updated: [Date]"
+      Font Size: 14px
+      Color: Palette - Muted Text
 ```
 
 #### Section 2: Content Cards
 ```
 Block: Kadence Row Layout
-Padding: 0 (container), 64px bottom
+Background: Palette - Background
+Padding: 0 16px 64px 16px (mobile: 0 16px 48px 16px)
 
 Inner Blocks:
   - Kadence Column (Single column, max-width: 896px, centered)
@@ -1431,31 +2086,34 @@ Inner Blocks:
       
       Each Section as Kadence Advanced Card:
         Background: #FFFFFF
-        Border: 1px solid Palette - Border
+        Border: 1px solid Palette - Border (#D9E3E8)
         Border Radius: 16px
-        Padding: 32px
-        Margin Bottom: 32px
+        Padding: 32px (mobile: 24px)
+        Margin Bottom: 32px (mobile: 24px)
         
-        Content:
+        Content Structure:
           - Advanced Heading (H2):
               Section title (e.g., "1. Introduction")
-              Font Size: 24px
+              Font Size: 24px (mobile: 20px)
+              Font Weight: 600
+              Color: Palette - Foreground
               Margin Bottom: 16px
           
-          - Advanced Paragraph:
+          - Advanced Paragraph(s):
               Section content
-              Font Size: 16px
+              Font Size: 16px (mobile: 14px)
               Line Height: 1.75
-              Color: Palette - Muted Text
+              Color: Palette - Muted Text (#667080)
+              Margin Bottom: 16px (between paragraphs)
       
       Sections:
-      1. Introduction
-      2. Services
-      3. Appointments and Cancellations
-      4. Payment Terms
-      5. Emergency Services
-      6. Liability
-      7. Contact
+        1. Introduction
+        2. Services
+        3. Appointments and Cancellations
+        4. Payment Terms
+        5. Emergency Services
+        6. Liability
+        7. Contact Information
 ```
 
 ---
@@ -1474,12 +2132,21 @@ Template: Fullwidth Blank
 Same structure as Terms & Conditions page, with 7 sections:
 
 1. Introduction
-2. Information We Collect (with bullet list)
+2. Information We Collect (with bullet list using Kadence List Block)
 3. How We Use Your Information (with bullet list)
 4. Data Security
 5. Data Sharing (with bullet list)
 6. Your Rights (with bullet list)
 7. Contact Us
+
+**List Styling (for bullet points):**
+```
+Margin Left: 24px
+Line Height: 2
+Font Size: 16px (mobile: 14px)
+Color: Palette - Muted Text
+List Marker Color: Palette - Accent
+```
 
 ---
 
@@ -1489,24 +2156,27 @@ Same structure as Terms & Conditions page, with 7 sections:
 
 **Go to: Appearance → Customize → Additional CSS**
 
-Add the following custom CSS from the export package:
+Add the following custom CSS:
 
 ```css
-/* Copy relevant sections from export/css/styles.css */
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
 
-/* Accordion enhancements (for Services page mobile) */
+/* Accordion enhancements (Services page mobile) */
 .kb-accordion .kb-accordion-pane-header {
   transition: background-color 0.2s ease;
 }
 
 .kb-accordion .kb-accordion-pane-header:hover {
-  background-color: rgba(242, 245, 247, 0.5);
+  background-color: rgba(240, 244, 246, 0.5);
 }
 
 /* Form validation styles */
 .form-input.error,
 .form-textarea.error {
-  border-color: #DC2626;
+  border-color: #DC2626 !important;
 }
 
 .field-error {
@@ -1517,15 +2187,22 @@ Add the following custom CSS from the export package:
 }
 
 /* Staff card hover effects */
-.staff-card:hover {
-  transform: translateY(-4px);
+.staff-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.staff-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 /* Service card icon hover */
+.service-card .icon-wrapper {
+  transition: transform 0.2s ease;
+}
+
 .service-card:hover .icon-wrapper {
   transform: scale(1.1);
-  transition: transform 0.2s ease;
 }
 
 /* Testimonial quote icon */
@@ -1533,17 +2210,12 @@ Add the following custom CSS from the export package:
   opacity: 0.3;
 }
 
-/* Footer contact icons */
+/* Footer contact layout */
 .footer-contact {
   display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0.25rem;
   margin-bottom: 0.75rem;
-}
-
-.footer-contact-icon {
-  flex-shrink: 0;
-  margin-top: 0.125rem;
 }
 
 /* Instagram grid hover effect */
@@ -1555,21 +2227,55 @@ Add the following custom CSS from the export package:
   opacity: 0.9;
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
+/* Button transitions */
+.kb-button {
+  transition: all 0.2s ease;
+}
+
+/* Card transitions */
+.kb-card {
+  transition: all 0.3s ease;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid #54BFED;
+  outline-offset: 2px;
 }
 
 /* Print styles */
 @media print {
   .navbar,
   .footer,
-  .btn {
+  .kb-button {
     display: none !important;
   }
   
   .kb-row-layout-wrap {
     page-break-inside: avoid;
+  }
+  
+  body {
+    background: white !important;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Reduce padding on mobile */
+  .kb-row-layout-wrap {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Stack buttons on mobile */
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .button-group .kb-button {
+    width: 100%;
   }
 }
 ```
@@ -1577,12 +2283,19 @@ html {
 ### Adding Custom JavaScript
 
 **Option 1: Using a Plugin**
-- Install "Code Snippets" plugin
-- Add new snippet with the JavaScript from `export/js/main.js`
+1. Install "Code Snippets" plugin
+2. Add new snippet with JavaScript functionality:
+
+```javascript
+// Mobile menu enhancement
+// Form validation
+// Smooth scrolling
+// Lazy loading
+// (Copy relevant sections from export/js/main.js)
+```
 
 **Option 2: Child Theme**
-- Create a child theme
-- Enqueue the JavaScript file in functions.php:
+Create a child theme and enqueue the JavaScript file in functions.php:
 
 ```php
 function vet3_enqueue_scripts() {
@@ -1597,9 +2310,9 @@ function vet3_enqueue_scripts() {
 add_action('wp_enqueue_scripts', 'vet3_enqueue_scripts');
 ```
 
-**Option 3: Footer Scripts (Simple)**
+**Option 3: Footer Scripts (Simplest)**
 - Go to **Appearance → Customize → Additional Scripts**
-- Paste the minified version of the JavaScript in the footer scripts section
+- Paste JavaScript in the footer scripts section
 
 ---
 
@@ -1619,7 +2332,7 @@ add_action('wp_enqueue_scripts', 'vet3_enqueue_scripts');
 ```
 ✓ Mobile (320px - 767px)
 ✓ Tablet (768px - 1023px)
-✓ Desktop (1024px+)
+✓ Desktop (1024px - 1439px)
 ✓ Large Desktop (1440px+)
 ```
 
@@ -1627,12 +2340,13 @@ add_action('wp_enqueue_scripts', 'vet3_enqueue_scripts');
 
 **Install Performance Plugin**
 ```
-Recommended: WP Rocket or similar
+Recommended: WP Rocket, LiteSpeed Cache, or W3 Total Cache
 ```
 
 **Optimization Checklist**
 ```
-✓ Enable caching
+✓ Enable page caching
+✓ Enable browser caching
 ✓ Minify CSS and JavaScript
 ✓ Optimize images (use WebP format)
 ✓ Enable lazy loading for images
@@ -1640,15 +2354,17 @@ Recommended: WP Rocket or similar
 ✓ Load critical CSS inline
 ✓ Defer non-critical JavaScript
 ✓ Use CDN for assets (optional)
+✓ Enable GZIP compression
 ```
 
 **Image Optimization**
 ```
-✓ Compress images before upload
-✓ Use appropriate image sizes
-✓ Add alt text to all images
+✓ Compress images before upload (max 200KB for photos)
+✓ Use appropriate image dimensions
+✓ Add descriptive alt text to all images
 ✓ Lazy load images below the fold
 ✓ Use srcset for responsive images
+✓ Convert to WebP format where supported
 ```
 
 ### SEO Configuration
@@ -1660,42 +2376,57 @@ Recommended: Yoast SEO or Rank Math
 
 **Configure Each Page:**
 ```
-✓ Meta Title (under 60 characters)
-✓ Meta Description (under 160 characters)
+✓ Meta Title (under 60 characters, include keywords)
+✓ Meta Description (under 160 characters, compelling copy)
 ✓ Focus Keyword
-✓ URL Slug (clean, descriptive)
-✓ Open Graph image
-✓ Schema markup (where applicable)
+✓ URL Slug (clean, descriptive, lowercase)
+✓ Open Graph image (1200x630px)
+✓ Schema markup (LocalBusiness, VeterinaryCare)
+✓ Canonical URL
 ```
 
 **Example Meta for Home Page:**
 ```
 Title: Vet3 Equine Care - Independent Equine Vets | Norfolk & Suffolk
-Description: Fully mobile independent equine vets serving Norfolk & Suffolk. Regular zone visits across the region. Expert horse care from professional vets. 24/7 emergency service.
-Keywords: equine vets norfolk, horse vets suffolk, independent vets, mobile equine veterinary
+Description: Fully mobile independent equine vets serving Norfolk & Suffolk. Regular zone visits across the region. Expert horse care from professional vets. 24/7 emergency service available.
+Keywords: equine vets norfolk, horse vets suffolk, independent vets, mobile equine veterinary, zone visits, emergency horse care
+URL: /
+```
+
+**Example Meta for Services Page:**
+```
+Title: Equine Veterinary Services | Norfolk & Suffolk | Vet3
+Description: Comprehensive equine veterinary care including health checks, vaccinations, dentistry, lameness investigations, and emergency services. Zone visits across Norfolk & Suffolk.
+Keywords: equine services, horse veterinary care, vaccinations, dentistry, lameness
+URL: /services
 ```
 
 ### Accessibility Testing
 ```
-✓ Keyboard navigation works
-✓ All images have alt text
-✓ Color contrast meets WCAG AA standards
-✓ Form labels are properly associated
-✓ Links have descriptive text
-✓ Headings follow logical hierarchy
-✓ ARIA labels where needed
+✓ Keyboard navigation works (Tab through all interactive elements)
+✓ All images have descriptive alt text
+✓ Color contrast meets WCAG AA standards (4.5:1 for text)
+✓ Form labels are properly associated with inputs
+✓ Links have descriptive text (no "click here")
+✓ Headings follow logical hierarchy (H1 → H2 → H3)
+✓ ARIA labels on icon-only buttons
+✓ Focus indicators are visible
+✓ Forms can be completed with keyboard only
+✓ Screen reader tested (NVDA or VoiceOver)
 ```
 
 ### Form Testing
 ```
 ✓ All form fields validate correctly
-✓ Required fields are marked
+✓ Required fields are properly marked
 ✓ Email validation works
 ✓ Phone number validation works
-✓ Success messages display
-✓ Error messages are clear
+✓ Success messages display correctly
+✓ Error messages are clear and helpful
 ✓ Form submissions are received
+✓ Email notifications sent to correct addresses
 ✓ Thank you/confirmation page works
+✓ Spam protection is active
 ```
 
 ### Analytics Setup
@@ -1705,54 +2436,65 @@ Keywords: equine vets norfolk, horse vets suffolk, independent vets, mobile equi
 1. Create Google Analytics 4 property
 2. Install "Site Kit by Google" plugin
 3. Connect to your Google account
-4. Enable Google Analytics
-5. Add tracking to all pages
+4. Enable Google Analytics module
+5. Add tracking code to all pages
+6. Set up conversion goals
 ```
 
 **Track Important Events:**
 ```
 - Form submissions (Register, Contact, Zone Enquiry)
-- Phone number clicks
-- Email clicks
-- Button clicks (CTAs)
-- Instagram link clicks
+- Phone number clicks (tel: links)
+- Email clicks (mailto: links)
+- Button clicks (all CTAs)
+- Social media link clicks
+- PDF downloads (if any)
+- External link clicks
 ```
 
 ### Final Checklist
 
 **Content**
 ```
-✓ All text is proofread
-✓ All links work correctly
-✓ Contact information is correct
+✓ All text is proofread and error-free
+✓ All internal links work correctly
+✓ All external links open in new tab
+✓ Contact information is accurate
 ✓ Social media links are correct
-✓ Logo displays correctly
-✓ All images are optimized
+✓ Logo displays correctly on all pages
+✓ All images are optimized and load properly
 ✓ Alt text added to all images
+✓ Copyright year is current
 ```
 
 **Functionality**
 ```
-✓ Mobile menu works
+✓ Mobile menu opens and closes smoothly
 ✓ All forms submit correctly
-✓ All buttons link correctly
-✓ Phone links work on mobile
-✓ Email links open email client
+✓ Form validation works as expected
+✓ All buttons link to correct pages
+✓ Phone links work on mobile devices
+✓ Email links open default email client
 ✓ Social links open in new tab
-✓ Smooth scrolling works
+✓ Smooth scrolling works for anchor links
 ✓ Accordion expands/collapses (Services page)
+✓ Zone cards display correctly
+✓ Sticky header works on scroll
 ```
 
 **Design**
 ```
-✓ Colors match style guide
-✓ Typography matches style guide
-✓ Spacing is consistent
+✓ Colors match design system exactly
+✓ Typography matches specifications
+✓ Spacing is consistent throughout
 ✓ Cards have proper hover states
 ✓ Buttons have proper hover states
-✓ Layout is responsive on all devices
-✓ Footer displays correctly
-✓ Header is sticky
+✓ Layout is fully responsive on all devices
+✓ Footer displays correctly on all pages
+✓ Header is sticky and functional
+✓ Navigation highlights active page
+✓ Images maintain aspect ratio
+✓ Border radius is consistent
 ```
 
 **Performance**
@@ -1761,9 +2503,11 @@ Keywords: equine vets norfolk, horse vets suffolk, independent vets, mobile equi
 ✓ Images are lazy loaded
 ✓ CSS is minified
 ✓ JavaScript is minified
-✓ No console errors
-✓ Mobile performance score > 80
-✓ Desktop performance score > 90
+✓ No console errors in browser
+✓ Mobile performance score > 80 (PageSpeed Insights)
+✓ Desktop performance score > 90 (PageSpeed Insights)
+✓ First Contentful Paint < 2s
+✓ Time to Interactive < 4s
 ```
 
 ---
@@ -1772,32 +2516,36 @@ Keywords: equine vets norfolk, horse vets suffolk, independent vets, mobile equi
 
 ### Regular Updates
 ```
-- Update WordPress core monthly
+- Update WordPress core monthly (with backup)
 - Update Kadence Theme when available
 - Update Kadence Blocks when available
 - Update all plugins regularly
-- Backup before each update
+- Always backup before updates
+- Test on staging site first (if available)
 ```
 
 ### Monthly Checks
 ```
-- Test all forms
-- Check all links
-- Review Google Analytics
+- Test all forms (submit test entries)
+- Check all links (use link checker plugin)
+- Review Google Analytics data
 - Check for broken images
-- Review site speed
-- Check mobile display
+- Review site speed (PageSpeed Insights)
+- Check mobile display on real devices
 - Review security logs
+- Check spam filter (form submissions)
+- Update content if needed
 ```
 
 ### Content Updates
 ```
-- Update staff bios as needed
+- Update staff bios as team changes
 - Add new services when offered
-- Update zone schedules
-- Refresh testimonials
-- Update Instagram feed
+- Update zone schedules seasonally
+- Refresh testimonials regularly
+- Update Instagram feed/links
 - Keep blog/news updated (if added)
+- Update emergency contact info if changed
 ```
 
 ---
@@ -1805,18 +2553,22 @@ Keywords: equine vets norfolk, horse vets suffolk, independent vets, mobile equi
 ## Support Resources
 
 ### Kadence Documentation
-- https://www.kadencewp.com/help-center/
-- https://www.kadencewp.com/kadence-blocks/
+- Kadence Help Center: https://www.kadencewp.com/help-center/
+- Kadence Blocks Documentation: https://www.kadencewp.com/kadence-blocks/
+- Kadence YouTube Channel: https://www.youtube.com/c/KadenceWP
 
 ### WordPress Resources
-- https://wordpress.org/support/
-- https://developer.wordpress.org/
+- WordPress Support Forums: https://wordpress.org/support/
+- WordPress Developer Resources: https://developer.wordpress.org/
+- WordPress Codex: https://codex.wordpress.org/
 
-### Useful Tools
+### Useful Testing Tools
 - PageSpeed Insights: https://pagespeed.web.dev/
 - GTmetrix: https://gtmetrix.com/
-- Wave Accessibility: https://wave.webaim.org/
+- WAVE Accessibility: https://wave.webaim.org/
 - Mobile-Friendly Test: https://search.google.com/test/mobile-friendly
+- Broken Link Checker: https://www.brokenlinkcheck.com/
+- WebAIM Contrast Checker: https://webaim.org/resources/contrastchecker/
 
 ---
 
@@ -1825,8 +2577,17 @@ Keywords: equine vets norfolk, horse vets suffolk, independent vets, mobile equi
 ### Issue: Colors Not Displaying Correctly
 **Solution:** 
 1. Check Global Palette settings in Customizer → General → Colors
-2. Ensure color codes match the style guide exactly
-3. Clear browser cache and Kadence cache
+2. Ensure hex codes match the design system exactly:
+   - Primary: #090B21
+   - Accent: #54BFED
+   - Foreground: #131626
+   - Secondary: #F0F4F6
+   - Muted: #F4F7F8
+   - Muted Text: #667080
+   - Border: #D9E3E8
+3. Clear browser cache and WordPress cache
+4. Clear Kadence cache (if using Kadence Pro)
+5. Check for conflicting custom CSS
 
 ### Issue: Mobile Menu Not Working
 **Solution:**
@@ -1834,45 +2595,165 @@ Keywords: equine vets norfolk, horse vets suffolk, independent vets, mobile equi
 2. Verify breakpoint is set to 768px
 3. Clear JavaScript cache
 4. Check for JavaScript conflicts with other plugins
+5. Deactivate other plugins one by one to isolate conflict
+6. Ensure jQuery is loaded correctly
 
 ### Issue: Forms Not Submitting
 **Solution:**
-1. Check form plugin settings
-2. Verify email addresses in form settings
-3. Check spam filter settings
-4. Test with anti-spam features disabled
-5. Check server email configuration
+1. Check form plugin settings (Contact Form 7 or WPForms)
+2. Verify email addresses in form notification settings
+3. Check spam filter settings (may be blocking)
+4. Test with anti-spam features disabled temporarily
+5. Check server email configuration (contact hosting)
+6. Review server error logs for PHP errors
+7. Ensure form action URL is correct
 
 ### Issue: Images Not Loading
 **Solution:**
-1. Verify image paths are correct
-2. Check file permissions on uploads folder
-3. Regenerate thumbnails using plugin
-4. Check lazy loading settings
+1. Verify image file paths are correct
+2. Check file permissions on uploads folder (should be 755)
+3. Regenerate thumbnails using "Regenerate Thumbnails" plugin
+4. Check lazy loading settings (may be too aggressive)
+5. Verify image files actually exist on server
+6. Check browser console for 404 errors
 
 ### Issue: Layout Breaking on Mobile
 **Solution:**
-1. Check Kadence Row Layout responsive settings
-2. Verify column settings for mobile breakpoint
-3. Test in multiple mobile browsers
-4. Check for custom CSS conflicts
+1. Check Kadence Row Layout responsive settings for each section
+2. Verify column settings for mobile breakpoint (< 768px)
+3. Test in multiple mobile browsers (Safari, Chrome)
+4. Check for custom CSS with fixed widths
+5. Inspect elements in browser dev tools (mobile view)
+6. Ensure container max-width is not exceeded
+
+### Issue: Slow Page Load Times
+**Solution:**
+1. Optimize and compress all images
+2. Enable caching plugin (WP Rocket, W3 Total Cache)
+3. Minify CSS and JavaScript
+4. Enable GZIP compression
+5. Use a CDN for static assets
+6. Lazy load images below the fold
+7. Defer non-critical JavaScript
+8. Reduce number of active plugins
+9. Upgrade hosting plan if needed
+
+### Issue: Button Hover States Not Working
+**Solution:**
+1. Check button class names in Block settings
+2. Verify CSS transitions are applied
+3. Clear CSS cache
+4. Check for conflicting CSS from other plugins
+5. Inspect element in browser dev tools
+6. Re-apply button styles in Kadence settings
 
 ---
 
 ## Next Steps After Setup
 
-1. **Test Everything**: Go through every page and test all functionality
-2. **Ask for Feedback**: Have colleagues or friends review the site
-3. **Launch Checklist**: 
-   - SSL certificate installed
-   - 301 redirects configured (if migrating)
-   - Search engines can index site
-   - XML sitemap submitted to Google
-   - Google Analytics tracking
-   - Contact forms tested
-4. **Monitor**: Check analytics and error logs regularly
-5. **Iterate**: Continuously improve based on user feedback
+1. **Thorough Testing**: 
+   - Go through every page on multiple devices
+   - Test all forms and submit test entries
+   - Click every link to ensure it works
+   - Test on real mobile devices, not just browser emulation
+
+2. **Ask for Feedback**: 
+   - Have colleagues review the site
+   - Get feedback from horse owners if possible
+   - Check with someone unfamiliar with the site
+
+3. **Pre-Launch Checklist**: 
+   - [ ] SSL certificate installed and active
+   - [ ] 301 redirects configured (if migrating from old site)
+   - [ ] Search engines can index site (remove robots.txt block)
+   - [ ] XML sitemap created and submitted to Google Search Console
+   - [ ] Google Analytics tracking code active
+   - [ ] All contact forms tested and working
+   - [ ] 404 page customized
+   - [ ] Favicon displays correctly
+   - [ ] Social media metadata set up
+   - [ ] Privacy policy and terms pages complete
+
+4. **Launch Day**:
+   - Clear all caches (WordPress, Kadence, browser)
+   - Test from multiple locations/networks
+   - Monitor error logs
+   - Check form submissions come through
+
+5. **Post-Launch Monitoring** (First Week):
+   - Check Google Analytics daily
+   - Monitor form submissions
+   - Review error logs
+   - Check for broken links
+   - Monitor page load times
+   - Read any user feedback
+
+6. **Continuous Improvement**:
+   - Analyze user behavior in Analytics
+   - A/B test different CTAs
+   - Update content based on common questions
+   - Add new testimonials regularly
+   - Keep services list current
+   - Monitor SEO rankings and adjust
 
 ---
 
-This completes the Kadence-specific setup guide. Follow this guide step-by-step to recreate the Vet3 Equine Care website in WordPress with Kadence theme and blocks.
+## DESIGN SYSTEM REFERENCE (QUICK REFERENCE)
+
+### Colors (HSL Format)
+```
+Primary:           hsl(235, 95%, 13%)   = #090B21
+Accent:            hsl(200, 85%, 65%)   = #54BFED
+Foreground:        hsl(235, 50%, 15%)   = #131626
+Background:        hsl(0, 0%, 100%)     = #FFFFFF
+Secondary:         hsl(200, 20%, 95%)   = #F0F4F6
+Muted:             hsl(200, 15%, 96%)   = #F4F7F8
+Muted Foreground:  hsl(235, 20%, 50%)   = #667080
+Border:            hsl(200, 20%, 90%)   = #D9E3E8
+```
+
+### Spacing Scale
+```
+4px   = 0.25rem
+8px   = 0.5rem
+12px  = 0.75rem
+16px  = 1rem
+24px  = 1.5rem
+32px  = 2rem
+48px  = 3rem
+64px  = 4rem
+```
+
+### Border Radius
+```
+Small:   6px  = 0.375rem (buttons, inputs)
+Medium:  12px = 0.75rem  (small cards, zone cards)
+Large:   16px = 1rem     (cards, images)
+XLarge:  24px = 1.5rem   (hero cards, CTAs)
+```
+
+### Typography
+```
+H1: 60px desktop, 36px mobile
+H2: 48px desktop, 30px mobile
+H3: 30px desktop, 24px mobile
+H4: 24px desktop, 20px mobile
+Body: 16px
+Small: 14px
+XSmall: 12px
+
+Line Heights:
+Headings: 1.2-1.4
+Body: 1.75
+```
+
+### Breakpoints
+```
+Mobile:  < 768px
+Tablet:  768px - 1023px
+Desktop: >= 1024px
+```
+
+---
+
+This completes the comprehensive Kadence-specific setup guide with exact design system specifications. Follow this guide step-by-step to recreate the Vet3 Equine Care website in WordPress with Kadence theme and blocks, ensuring pixel-perfect accuracy to the design system.
