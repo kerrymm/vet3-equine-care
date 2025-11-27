@@ -312,57 +312,315 @@ Menu Item Styling:
     Font Weight: 600
 ```
 
-**Header Buttons**
+**Header Buttons - STEP BY STEP GUIDE**
+
+Kadence allows you to add custom content and buttons to the header using the Header Builder.
+
+### STEP 1: Access Header Builder
 ```
-Button 1 - Register:
-  Text: "Register"
-  Link: /register
-  Style: Primary
-  Background: Palette - Primary (#090B21)
-  Text Color: #FFFFFF
-  Padding: 8px 16px
-  Border Radius: 6px
-  Font Size: 14px
-  Font Weight: 500
-  Hover: Opacity 0.9
-  
-Button 2 - Phone:
-  Text: "24/7 On-Call"
-  Icon: Phone icon (lucide-react)
-  Link: tel:01603123456
-  Style: Outline
-  Border: 1px solid Palette - Border (#D9E3E8)
-  Text Color: Palette - Foreground (#131626)
-  Padding: 8px 16px
-  Border Radius: 6px
-  Font Size: 14px
-  Hover: Background Palette - Secondary
+Navigate: Appearance → Customize → Header Builder
 ```
 
-### Mobile Header
+### STEP 2: Add Button Elements to Header
 
-**Mobile Menu**
+In the Header Builder, you'll see a visual layout of your header. You need to add TWO button elements.
+
+**For Desktop Header:**
+1. Click on the header row where you want buttons (typically "Right" section)
+2. Click the "+" icon to add elements
+3. Add "Button" element twice (for Register and Phone buttons)
+4. Drag them to position next to each other on the right side
+
+**Button Placement:**
 ```
+Left: Logo
+Center: Navigation Menu
+Right: Button 1 (Register) + Button 2 (Phone)
+```
+
+### STEP 3: Configure Register Button (Button 1)
+
+Click on the first button element to open its settings:
+
+```
+Label: "Register"
+Link: /register (or full URL: https://yourdomain.com/register)
+Link Target: Same window
+
+STYLE SETTINGS:
+Size: Small
+Background Color: Palette - Primary (#090B21)
+Text Color: White (#FFFFFF)
+Border: None
+Border Radius: 6px
+Font Size: 14px
+Font Weight: 500
+Padding: 8px 16px (Top/Bottom: 8px, Left/Right: 16px)
+
+HOVER STATE:
+Background Color: Darken Primary by 10% (or use #070916)
+Text Color: White (#FFFFFF)
+Transition: 0.2s ease
+
+SPACING:
+Margin Right: 8px (to add gap between buttons)
+```
+
+### STEP 4: Configure Phone Button (Button 2)
+
+Click on the second button element to open its settings:
+
+```
+Label: "📞 24/7 On-Call" (use emoji or add icon if Kadence supports)
+Link: tel:01603123456
+Link Target: Same window
+
+STYLE SETTINGS:
+Size: Small
+Background Color: Transparent or Palette - Background (#FFFFFF)
+Text Color: Palette - Foreground (#131626)
+Border: 1px solid Palette - Border (#D9E3E8)
+Border Radius: 6px
+Font Size: 14px
+Font Weight: 500
+Padding: 8px 16px
+
+HOVER STATE:
+Background Color: Palette - Secondary (#F0F4F6)
+Text Color: Palette - Foreground (#131626)
+Border Color: Palette - Border (#D9E3E8)
+Transition: 0.2s ease
+```
+
+**Alternative: Use HTML in Button Label**
+If Kadence allows HTML in button labels, use this for the phone icon:
+```html
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+</svg> 24/7 On-Call
+```
+
+### STEP 5: Mobile Header Buttons
+
+**For Mobile Header:**
+1. In Header Builder, switch to "Mobile" view (toggle at top)
+2. Add the same two buttons to the mobile header or mobile drawer
+3. For mobile drawer menu, buttons should appear AFTER menu items
+
+```
+Mobile Button Settings (both buttons):
+Width: Full width (100%)
+Margin: 16px (all sides) for first button
+Margin: 0 16px 16px 16px for second button
+Display: Stack vertically
+Font Size: 16px
+Padding: 12px 16px
+```
+
+### Mobile Header Configuration
+
+**Mobile Menu Setup**
+```
+Access: Header Builder → Mobile View (toggle at top)
+
 Breakpoint: 768px and below
-Toggle Icon: Hamburger (3 lines)
-Toggle Position: Right
-Slide-in Direction: Right
-Background: Palette - Background (#FFFFFF)
-Width: 300px
-Overlay: Yes (with 40% opacity)
+Toggle Icon: Hamburger (☰ three horizontal lines)
+Toggle Position: Right side of header
+Toggle Color: Palette - Foreground (#131626)
 
-Mobile Menu Items:
-  Display: Vertical stack
-  Full-width buttons
-  Padding: 12px 16px
-  Border Bottom: 1px solid Palette - Border
-  Font Size: 16px
-  
-Mobile Header Buttons:
-  Display: Stacked below menu items
-  Full width
-  Margin: 16px 16px 8px 16px
+Mobile Drawer Settings:
+  Slide Direction: From right
+  Background: Palette - Background (#FFFFFF)
+  Width: 300px (or 100% for full-screen)
+  Overlay: Yes
+  Overlay Opacity: 40%
+  Close Icon: X (top right of drawer)
 ```
+
+**Mobile Menu Structure**
+```
+Order in Mobile Drawer:
+1. Navigation menu items (vertical stack)
+2. Register Button
+3. Phone Button
+
+Menu Items Styling:
+  Display: Vertical stack (one item per line)
+  Width: 100%
+  Padding: 12px 16px
+  Border Bottom: 1px solid Palette - Border (#D9E3E8)
+  Font Size: 16px
+  Font Weight: 500
+  Color: Palette - Muted Text (#667080)
+  Active Color: Palette - Foreground (#131626)
+  Active Background: Palette - Secondary (#F0F4F6)
+```
+
+**Mobile Button Styling:**
+
+Register Button (Mobile):
+```
+Width: calc(100% - 32px)
+Margin: 16px 16px 8px 16px
+Padding: 12px 16px
+Background: Palette - Primary (#090B21)
+Text Color: White (#FFFFFF)
+Border Radius: 6px
+Font Size: 16px
+Font Weight: 500
+Text Align: Center
+```
+
+Phone Button (Mobile):
+```
+Width: calc(100% - 32px)
+Margin: 0 16px 16px 16px
+Padding: 12px 16px
+Background: Transparent
+Text Color: Palette - Foreground (#131626)
+Border: 1px solid Palette - Border (#D9E3E8)
+Border Radius: 6px
+Font Size: 16px
+Font Weight: 500
+Text Align: Center
+```
+
+**Troubleshooting Mobile Buttons:**
+- If buttons don't show: Check Header Builder → Mobile → Drawer Content → Add buttons manually
+- If buttons overlap: Set explicit width and margins as shown above
+- If drawer doesn't close: Enable "Close on link click" in mobile menu settings
+```
+
+### COMMON BUTTON ISSUES & SOLUTIONS
+
+**Problem: Two buttons don't appear side by side on desktop**
+```
+Solution:
+1. In Header Builder, ensure buttons are in the same "Row" element
+2. Check that the header row has enough space (use 3-column layout: Logo | Menu | Buttons)
+3. Set button container to "Horizontal" layout
+4. Add margin-right: 8px to first button for spacing
+5. If using custom HTML, wrap both buttons in a flex container:
+   <div style="display: flex; gap: 8px;">
+     [Button 1]
+     [Button 2]
+   </div>
+```
+
+**Problem: Phone link (tel:) doesn't work**
+```
+Solution:
+1. Ensure link format is exactly: tel:01603123456 (no spaces)
+2. Check button element accepts URL/link field (some elements only accept page links)
+3. If using HTML button, use: <a href="tel:01603123456">Button Text</a>
+4. Test on mobile device (tel: links don't work in desktop browsers)
+```
+
+**Problem: Buttons look different than expected**
+```
+Solution:
+1. Clear browser cache and Kadence cache
+2. Check Global Styles → Buttons for default button styling conflicts
+3. Add !important to button styles if needed
+4. Use Kadence's "Custom CSS" for button classes:
+   
+   .kadence-header-button.button-1 {
+     background: #090B21 !important;
+     color: #FFFFFF !important;
+   }
+   
+   .kadence-header-button.button-2 {
+     background: transparent !important;
+     border: 1px solid #D9E3E8 !important;
+   }
+```
+
+**Problem: Buttons not showing on mobile**
+```
+Solution:
+1. Toggle to "Mobile View" in Header Builder
+2. Check if buttons are added to Mobile Header OR Mobile Drawer
+3. Mobile and Desktop headers are configured separately
+4. For drawer menu: Add buttons in Drawer Content section
+5. Enable "Show in mobile" for each button element
+```
+
+**Problem: Button spacing/alignment issues**
+```
+Solution:
+1. Desktop: Set header row to use flexbox with justify-content: space-between
+2. Buttons container: display: flex, align-items: center, gap: 8px
+3. Mobile: Set buttons to width: 100%, with proper margins (16px)
+4. Use Kadence's spacing controls (padding/margin) instead of custom CSS
+```
+
+**Problem: Icon not showing in phone button**
+```
+Solution:
+1. If Kadence supports icon field: Select phone icon from icon library
+2. If not: Use emoji 📞 in button text
+3. Or use SVG code in HTML mode (if available)
+4. Or use Font Awesome: <i class="fa fa-phone"></i> 24/7 On-Call
+```
+
+**ALTERNATIVE METHOD: Custom HTML Element**
+
+If Kadence buttons aren't working correctly, use a custom HTML element instead:
+
+```html
+<!-- Add this as a Custom HTML element in Header Builder -->
+<div class="header-buttons" style="display: flex; gap: 8px; align-items: center;">
+  <a href="/register" class="btn-register" style="
+    display: inline-flex;
+    align-items: center;
+    background: #090B21;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  " onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+    Register
+  </a>
+  
+  <a href="tel:01603123456" class="btn-phone" style="
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: #131626;
+    padding: 8px 16px;
+    border: 1px solid #D9E3E8;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+  " onmouseover="this.style.backgroundColor='#F0F4F6'" onmouseout="this.style.backgroundColor='transparent'">
+    📞 <span class="desktop-only">24/7 On-Call</span>
+  </a>
+</div>
+
+<style>
+@media (max-width: 768px) {
+  .header-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .header-buttons a {
+    width: 100%;
+    justify-content: center;
+  }
+  .desktop-only {
+    display: inline;
+  }
+}
+</style>
+```
+
+This custom HTML will work reliably across all themes and configurations.
 
 ---
 
