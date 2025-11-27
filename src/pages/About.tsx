@@ -53,10 +53,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Meet Our Fully Mobile Independent Equine Veterinary Team
+              Meet Your Equine Veterinary Team
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              As a proudly independent, fully mobile equine veterinary practice, our team comes directly to your yard with regular zone visits across Norfolk and Suffolk. We make every decision based on your horse's best interests—not corporate profit margins. Our experienced independent mobile vets provide the highest standard of personalised equine care wherever you are. With 24/7 on-call emergency support, we're here whenever you need us.
+              Our experienced veterinary professionals bring expert care directly to your stable across Norfolk and Suffolk. As an independent practice, we make every decision based on your horse's best interests—never corporate targets. With scheduled zone visits and 24/7 emergency support, we're here whenever you need us.
             </p>
           </div>
         </div>
@@ -133,10 +133,10 @@ const About = () => {
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Experience Independent Equine Veterinary Excellence
+            Ready to Experience Expert Horse Care?
           </h2>
           <p className="text-lg mb-8 opacity-95 max-w-2xl mx-auto">
-            Our independent veterinary team is ready to provide exceptional, personalised care for your horses. Register today to access professional equine healthcare from vets who answer only to you and your horse's needs.
+            Register today for professional equine healthcare delivered by experienced vets who prioritize your horse's wellbeing above all else.
           </p>
           <Button asChild size="lg" variant="secondary">
             <Link to="/register">Register Your Horse</Link>
