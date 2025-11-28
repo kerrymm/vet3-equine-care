@@ -126,18 +126,13 @@ const Home = () => {
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               We bring comprehensive veterinary care directly to your yard across Norfolk and Suffolk. As an independent practice, we focus on what matters most—your horse's health and wellbeing. No corporate pressures, just expert, personalised equine care with convenient scheduled zone visits.
             </p>
-            <div className="inline-flex items-center gap-3 p-6 bg-card rounded-xl border border-border">
-              <Phone className="h-6 w-6 text-accent" />
-              <div>
-                <div className="font-semibold text-foreground text-sm mb-1">24/7 Emergency Support</div>
-                <a
-                  href="tel:01603123456"
-                  className="text-xl font-bold text-accent hover:text-accent/80 transition-colors"
-                >
-                  01603 123 456
-                </a>
-              </div>
-            </div>
+            <p className="text-base text-foreground font-semibold mb-3">24/7 Emergency Support</p>
+            <a
+              href="tel:01603123456"
+              className="text-3xl font-bold text-accent hover:text-accent/80 transition-colors inline-block"
+            >
+              01603 123 456
+            </a>
           </div>
         </div>
       </section>
