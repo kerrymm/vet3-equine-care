@@ -117,26 +117,26 @@ const Home = () => {
       </section>
 
       {/* About Preview */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Professional Care at Your Stable
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               We bring comprehensive veterinary care directly to your yard across Norfolk and Suffolk. As an independent practice, we focus on what matters most—your horse's health and wellbeing. No corporate pressures, just expert, personalised equine care with convenient scheduled zone visits.
             </p>
-          </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 p-6 bg-secondary rounded-2xl max-w-2xl mx-auto">
-            <Phone className="h-8 w-8 text-accent flex-shrink-0" />
-            <div className="text-center sm:text-left">
-              <div className="font-semibold text-foreground mb-1">24/7 Emergency Support</div>
-              <a
-                href="tel:01603123456"
-                className="text-2xl font-bold text-accent hover:text-accent/80 transition-colors"
-              >
-                01603 123 456
-              </a>
+            <div className="inline-flex items-center gap-3 p-6 bg-card rounded-xl border border-border">
+              <Phone className="h-6 w-6 text-accent" />
+              <div>
+                <div className="font-semibold text-foreground text-sm mb-1">24/7 Emergency Support</div>
+                <a
+                  href="tel:01603123456"
+                  className="text-xl font-bold text-accent hover:text-accent/80 transition-colors"
+                >
+                  01603 123 456
+                </a>
+              </div>
             </div>
           </div>
         </div>
